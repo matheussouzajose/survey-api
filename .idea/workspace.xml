@@ -63,7 +63,7 @@
       <workItem from="1689630673525" duration="859000" />
       <workItem from="1689631543439" duration="295000" />
       <workItem from="1689631847568" duration="888000" />
-      <workItem from="1689632744315" duration="4149000" />
+      <workItem from="1689632744315" duration="4250000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ensure SignUpController an error if no name is provided">
       <option name="closed" value="true" />
