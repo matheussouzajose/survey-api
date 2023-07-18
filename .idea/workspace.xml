@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/email-validator-adapter.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/email-validator-adapter.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/matheus/Courses/surveys/src/utils",
+    "last_opened_file_path": "/home/matheus/Courses/surveys/src/data/usecases",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -46,13 +45,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data/usecases" />
       <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/domain/usecases" />
       <recent name="$PROJECT_DIR$/src/presentation/protocols" />
-      <recent name="$PROJECT_DIR$/src/presentation/errors" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data/usecases/add-account" />
       <recent name="$PROJECT_DIR$/src/presentation/controllers/signup" />
     </key>
   </component>
@@ -69,7 +69,7 @@
       <workItem from="1689630673525" duration="859000" />
       <workItem from="1689631543439" duration="295000" />
       <workItem from="1689631847568" duration="888000" />
-      <workItem from="1689632744315" duration="30200000" />
+      <workItem from="1689632744315" duration="32325000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ensure SignUpController an error if no name is provided">
       <option name="closed" value="true" />
