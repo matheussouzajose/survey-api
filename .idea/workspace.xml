@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/infra/criptography/bcrypt-adapter.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/infra/criptography/bcrypt-adapter.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +72,7 @@
       <workItem from="1689630673525" duration="859000" />
       <workItem from="1689631543439" duration="295000" />
       <workItem from="1689631847568" duration="888000" />
-      <workItem from="1689632744315" duration="37098000" />
+      <workItem from="1689632744315" duration="37562000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ensure SignUpController an error if no name is provided">
       <option name="closed" value="true" />
