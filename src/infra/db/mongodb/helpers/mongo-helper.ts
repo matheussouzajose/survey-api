@@ -1,6 +1,9 @@
 import { MongoClient, type Collection } from 'mongodb'
 
 let unknown
+// @ts-ignore
+// @ts-ignore
+// @ts-ignore
 export const MongoHelper = {
   client: unknown as MongoClient,
   uri: unknown as string,
@@ -8,10 +11,9 @@ export const MongoHelper = {
   async connect (uri: string): Promise<void> {
     this.uri = uri
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    this.client = await MongoClient.connect(process.env.MONGO_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
+    this.client = await MongoClient.connect(uri, {
+      // useNewUrlParser: true,
+      // useUnifiedTopology: true
     })
   },
 

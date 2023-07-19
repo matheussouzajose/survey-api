@@ -4,9 +4,8 @@ import { MongoHelper } from '../../infra/db/mongodb/helpers/mongo-helper'
 
 describe('Signup Routes', () => {
   beforeAll(async () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    await MongoHelper.connect(process.env.MONGO_URL)
+    const uri = process.env.MONGO_URL ?? 'mongodb://localhost:27017/clean-node-api'
+    await MongoHelper.connect(uri)
   })
 
   afterAll(async () => {
