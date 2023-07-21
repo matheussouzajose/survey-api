@@ -1,7 +1,10 @@
 import { LogMongoRepository } from './log'
 import { MongoHelper } from '../helpers/mongo-helper'
+import { type Collection } from 'mongodb'
 
 describe('Log Mongo Repository', () => {
+  let errorCollection: Collection
+
   beforeAll(async () => {
     const uri = process.env.MONGO_URL ?? 'mongodb://localhost:27017/clean-node-api'
     await MongoHelper.connect(uri)
@@ -12,7 +15,7 @@ describe('Log Mongo Repository', () => {
   })
 
   beforeEach(async () => {
-    const errorCollection = await MongoHelper.getCollection('errors')
+    errorCollection = await MongoHelper.getCollection('errors')
     await errorCollection.deleteMany({})
   })
 
@@ -20,8 +23,10 @@ describe('Log Mongo Repository', () => {
     return new LogMongoRepository()
   }
 
-  test('Should return an account on succes', async () => {
+  test('Should create  an error log on success', async () => {
     const sut = makeSut()
-    const log = await sut.log('any_error')
+    await sut.logError('any_error')
+    const count = await errorCollection.countDocuments()
+    expect(count).toBe(1)
   })
 })
