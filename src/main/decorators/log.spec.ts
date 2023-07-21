@@ -1,6 +1,6 @@
 import { LogControllerDecorator } from './log'
 import { type Controller, type HttpRequest, type HttpResponse } from '../../presentation/protocols'
-import { ok, serverError } from '../../presentation/helpers/http-helper'
+import {created, ok, serverError} from '../../presentation/helpers/http-helper'
 import { type LogErrorRepository } from '../../data/protocols/log-error-repository'
 import { type AccountModel } from '../../domain/models/account'
 
@@ -8,7 +8,7 @@ const makeControllerStub = (): Controller => {
   class ControllerStub implements Controller {
     async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
       return await new Promise(resolve => {
-        resolve(ok(makeFakeAccount()))
+        resolve(created(makeFakeAccount()))
       })
     }
   }
@@ -80,7 +80,7 @@ describe('LogDecorator Decorator', () => {
   test('Should return the same result of controller', async () => {
     const { sut } = makeSut()
     const httpResponse = await sut.handle(makeFakeRequest())
-    expect(httpResponse).toEqual(ok(makeFakeAccount()))
+    expect(httpResponse).toEqual(created(makeFakeAccount()))
   })
 
   test('Should call LogErrorRepository with correct error if controller returns a server error', async () => {
