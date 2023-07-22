@@ -7,7 +7,7 @@ import {
   type AccountModel,
   type HttpRequest
 } from './signup-protocols'
-import {badRequest, created, ok, serverError} from '../../helpers/http-helper'
+import { badRequest, created, serverError } from '../../helpers/http-helper'
 
 const makeEmailValidator = (): EmailValidator => {
   class EmailValidatorStub implements EmailValidator {

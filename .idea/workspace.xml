@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/globalConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/globalConfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presentation/controllers/login/login.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/login/login.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presentation/controllers/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/login/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/signup/signup.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/signup/signup.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,7 @@
       <workItem from="1689630673525" duration="859000" />
       <workItem from="1689631543439" duration="295000" />
       <workItem from="1689631847568" duration="888000" />
-      <workItem from="1689632744315" duration="95856000" />
+      <workItem from="1689632744315" duration="97790000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ensure SignUpController an error if no name is provided">
       <option name="closed" value="true" />
