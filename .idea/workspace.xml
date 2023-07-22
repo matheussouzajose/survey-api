@@ -8,9 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/globalConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/globalConfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presentation/controllers/login/login.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/login/login.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/login/login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/errors/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/errors/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/helpers/http-helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/helpers/http-helper.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +74,7 @@
       <workItem from="1689630673525" duration="859000" />
       <workItem from="1689631543439" duration="295000" />
       <workItem from="1689631847568" duration="888000" />
-      <workItem from="1689632744315" duration="100152000" />
+      <workItem from="1689632744315" duration="100440000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ensure SignUpController an error if no name is provided">
       <option name="closed" value="true" />
