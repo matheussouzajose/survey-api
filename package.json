@@ -7,6 +7,8 @@
     "start": "node dist/main/server.js",
     "build": "rimraf dist && tsc",
     "dev": "sucrase-node src/main/server.ts",
+    "up": "npm run build && docker compose up -d",
+    "logs": "docker logs -f --tail=1000 api-container",
     "test": "jest --passWithNoTests  --silent --noStackTrace --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand",
     "test:unit": "npm test -- --detectOpenHandles --watch -c jest-unit-config.js",
@@ -54,5 +56,8 @@
     "mongodb-memory-server-global": "^8.13.0",
     "serverless-http": "^3.2.0",
     "validator": "^13.9.0"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
