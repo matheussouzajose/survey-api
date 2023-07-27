@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/helpers/mongo-helper.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/helpers/mongo-helper.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/helpers/mongo-helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/helpers/mongo-helper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/log/log-mongo-repository.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/log/log-mongo-repository.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/config/env.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/env.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/routes/login-routes.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/login-routes.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +37,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/matheus/Courses/surveys",
+    "last_opened_file_path": "/home/matheus/Courses/surveys/docker-compose.yaml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,7 +80,7 @@
       <workItem from="1689631847568" duration="888000" />
       <workItem from="1689632744315" duration="117001000" />
       <workItem from="1690155890404" duration="388000" />
-      <workItem from="1690156286297" duration="43974000" />
+      <workItem from="1690156286297" duration="45245000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ensure SignUpController an error if no name is provided">
       <option name="closed" value="true" />
@@ -132,5 +123,23 @@
     <MESSAGE value="feat: ensure SignUpController an error if no name is provided" />
     <MESSAGE value="&quot;test: ensure SignUpController an error if no name is provided&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="&quot;test: ensure SignUpController an error if no name is provided&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/presentation/controllers/login/login-controller.ts</url>
+          <line>9</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/presentation/controllers/login/login-controller.ts</url>
+          <line>10</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -12,7 +12,29 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
-#      MONGO_INITDB_DATABASE=admin: surveys
+      MONGO_INITDB_DATABASE=admin: surveys
+    networks:
+      - node-api-network
+
+  api:
+    container_name: api-container
+    restart: always
+    image: node:16
+    working_dir: /usr/home/app
+    command: bash -c "npm install && npm run debug"
+    links:
+      - mongo
+    depends_on:
+      - mongo
+    environment:
+      - PORT=5050
+      - MONGO_URL=mongodb://root:example@mongo:27017
+    volumes:
+      - ./dist/:/usr/home/app/dist
+      - ./package.json:/usr/home/app/package.json
+    ports:
+      - "5050:5050"
+      - "9222:9222"
     networks:
       - node-api-network
 
@@ -27,28 +49,6 @@ services:
 #      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
 #    networks:
 #      - node-api-network
-
-  api:
-    container_name: api-container
-    restart: always
-    image: node:16
-    working_dir: /usr/home/app
-    command: bash -c "npm install && npm run start"
-    links:
-      - mongo
-    depends_on:
-      - mongo
-    environment:
-      - PORT=5050
-      - MONGO_URL=mongodb://root:example@mongo:27017/
-    volumes:
-      - ./dist/:/usr/home/app/dist
-      - ./package.json:/usr/home/app/package.json
-    ports:
-      - "5050:5050"
-      - "9222:9222"
-    networks:
-      - node-api-network
 
 networks:
   node-api-network:
