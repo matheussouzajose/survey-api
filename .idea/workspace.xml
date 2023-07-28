@@ -5,32 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/WiredTiger" beforeDir="false" afterPath="$PROJECT_DIR$/data/WiredTiger" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/WiredTiger.lock" beforeDir="false" afterPath="$PROJECT_DIR$/data/WiredTiger.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/data/WiredTiger.turtle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/WiredTiger.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/WiredTigerHS.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/WiredTigerHS.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/_mdb_catalog.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/_mdb_catalog.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/collection-0--2042769923338084940.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/collection-0--6554567575052826951.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/collection-0-2880024627985224921.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/collection-2--6554567575052826951.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/collection-4--6554567575052826951.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/collection-7--6554567575052826951.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/index-1--2042769923338084940.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/index-1--6554567575052826951.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/index-1-2880024627985224921.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/index-3--6554567575052826951.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/index-5--6554567575052826951.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/index-6--6554567575052826951.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/index-8--6554567575052826951.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/index-9--6554567575052826951.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mongod.lock" beforeDir="false" afterPath="$PROJECT_DIR$/data/mongod.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/data/sizeStorer.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/storage.bson" beforeDir="false" afterPath="$PROJECT_DIR$/data/storage.bson" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/factories/usecases/add-account/db-add-account-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/usecases/add-account/db-add-account-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/authentication/db-authentication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/authentication/db-authentication.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +80,7 @@
       <workItem from="1689631847568" duration="888000" />
       <workItem from="1689632744315" duration="117001000" />
       <workItem from="1690155890404" duration="388000" />
-      <workItem from="1690156286297" duration="55957000" />
+      <workItem from="1690156286297" duration="57199000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ensure SignUpController an error if no name is provided">
       <option name="closed" value="true" />
