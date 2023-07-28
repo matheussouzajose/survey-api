@@ -86,7 +86,7 @@ describe('DbAddAccount Usecase', () => {
     await expect(promise).rejects.toThrow()
   })
 
-  test('Should return an account on success', async () => {
+  test('Should return an add-account on success', async () => {
     const { sut } = makeSut()
     const account = await sut.add(makeFakeAddAccountModel())
     expect(account).toEqual(makeFakeAccount())
