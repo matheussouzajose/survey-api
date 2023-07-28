@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/login/login-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/login/login-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/globalConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/globalConfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/add-account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/add-account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/signup/signup-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/signup/signup-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/signup/signup-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/signup/signup-controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/signup/signup-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/signup/signup-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/helpers/http/http-helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/helpers/http/http-helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.eslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.eslint.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +41,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/matheus/Courses/surveys/docker-compose.yaml",
+    "last_opened_file_path": "/home/matheus/Courses/surveys/src/presentation/errors",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,11 +55,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/presentation/errors" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/infra/criptography/jwt-adapter" />
       <recent name="$PROJECT_DIR$/src/data/usecases/authentication" />
       <recent name="$PROJECT_DIR$/src/data/protocols/db" />
-      <recent name="$PROJECT_DIR$/src/data/protocols/criptography" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/adapters/validators" />
@@ -82,7 +84,7 @@
       <workItem from="1689631847568" duration="888000" />
       <workItem from="1689632744315" duration="117001000" />
       <workItem from="1690155890404" duration="388000" />
-      <workItem from="1690156286297" duration="47444000" />
+      <workItem from="1690156286297" duration="50713000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ensure SignUpController an error if no name is provided">
       <option name="closed" value="true" />
