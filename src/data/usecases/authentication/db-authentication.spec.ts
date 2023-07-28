@@ -192,7 +192,7 @@ describe('DbAuthentication UseCase', () => {
     expect(accessToken).toBe('token_encrypt')
   })
 
-  test('Should call UpdateAccessTokenRespository with correct values', async () => {
+  test('Should call UpdateAccessTokenRepository with correct values', async () => {
     const {
       sut,
       updateAccessTokenRepositoryStub
@@ -202,7 +202,7 @@ describe('DbAuthentication UseCase', () => {
     expect(updateSpy).toHaveBeenCalledWith('any_id', 'token_encrypt')
   })
 
-  test('Should throws if UpdateAccessTokenRespository throws', async () => {
+  test('Should throws if UpdateAccessTokenRepository throws', async () => {
     const {
       sut,
       updateAccessTokenRepositoryStub
