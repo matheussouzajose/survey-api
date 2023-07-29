@@ -5,7 +5,7 @@ import { type Collection } from 'mongodb'
 import { hash } from 'bcrypt'
 
 let accountCollection: Collection
-describe('Login Routes', () => {
+describe('Access Routes', () => {
   beforeAll(async () => {
     const uri = process.env.MONGO_URL ?? 'mongodb://localhost:27017/clean-node-api'
     await MongoHelper.connect(uri)
@@ -34,8 +34,8 @@ describe('Login Routes', () => {
     })
   })
 
-  describe('POST /login', () => {
-    test('Should return 200 on login', async () => {
+  describe('POST /signin', () => {
+    test('Should return 200 on signin', async () => {
       const password = await hash('123456', 12)
       await accountCollection.insertOne({
         name: 'Matheus',
@@ -43,7 +43,7 @@ describe('Login Routes', () => {
         password
       })
       await request(app)
-        .post('/api/login')
+        .post('/api/signin')
         .send({
           email: 'matheus.jose@gmail.com',
           password: '123456'
@@ -51,9 +51,9 @@ describe('Login Routes', () => {
         .expect(200)
     })
 
-    test('Should return 401 on login', async () => {
+    test('Should return 401 on signin', async () => {
       await request(app)
-        .post('/api/login')
+        .post('/api/signin')
         .send({
           email: 'matheus.jose@gmail.com',
           password: '123456'

@@ -5,27 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/routes/access-routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signin/signin-controller-protocols.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller-protocols.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/globalConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/globalConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/adapters/validators/email-validator-adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/adapters/validators/email-validator-adapter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/login/login-validation-factory.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/login/login-validation-factory.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/login/login-validation-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/login/login-validation-factory.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/signup/signup-validation-factory.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/signup/signup-validation-factory.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/signup/signup-validation-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/signup/signup-validation-factory.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/login/login-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/login/login-controller.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/login/login-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/login/login-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/signup/signup-controller-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/signup/signup-controller-protocols.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/helpers/validators/compare-fields-validation.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/compare-fields-validation.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/helpers/validators/compare-fields-validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/compare-fields-validation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/helpers/validators/email-validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/email-validation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/helpers/validators/email-validator.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/email-validator.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/helpers/validators/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/helpers/validators/required-field-validation.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/required-field-validation.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/helpers/validators/required-field-validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/required-field-validation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/helpers/validators/validation-composite.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/validation-composite.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/helpers/validators/validation-composite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/validation-composite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/protocols/email-validator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/protocols/email-validator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/protocols/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/protocols/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/login/login-controller-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signin/signin-controller-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/login/login-validation-factory.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signin/signin-validation-factory.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/login/login-validation-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signin/signin-validation-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/signup/signup-controller-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signup/signup-controller-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/signup/signup-validation-factory.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signup/signup-validation-factory.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/signup/signup-validation-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signup/signup-validation-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/routes/login-routes.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/access-routes.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/routes/login-routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/login/login-controller-protocols.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/login/login-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signin/signin-controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/login/login-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signin/signin-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/signup/signup-controller-protocols.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/signup/signup-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/signup/signup-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,11 +73,11 @@
       <recent name="$PROJECT_DIR$/src/data/protocols/db" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/factories/controllers/access" />
+      <recent name="$PROJECT_DIR$/src/presentation/controllers/login2" />
+      <recent name="$PROJECT_DIR$/src/infra" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/validation/protocols" />
-      <recent name="$PROJECT_DIR$/validation" />
-      <recent name="$PROJECT_DIR$/src/main/factories/usecases/authentication" />
-      <recent name="$PROJECT_DIR$/src/main/factories/controllers" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -97,7 +95,7 @@
       <workItem from="1689631847568" duration="888000" />
       <workItem from="1689632744315" duration="117001000" />
       <workItem from="1690155890404" duration="388000" />
-      <workItem from="1690156286297" duration="58760000" />
+      <workItem from="1690156286297" duration="60945000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ensure SignUpController an error if no name is provided">
       <option name="closed" value="true" />
@@ -112,16 +110,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/validation/validators/validation-composite.js" />
-        <option value="$PROJECT_DIR$/validation/validators/compare-fields-validation.js" />
-        <option value="$PROJECT_DIR$/validation/validators/index.js" />
-        <option value="$PROJECT_DIR$/validation/validators/email-validation.js" />
-        <option value="$PROJECT_DIR$/validation/validators/required-field-validation.js" />
-        <option value="$PROJECT_DIR$/validation/protocols/email-validator.js" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
