@@ -3,7 +3,7 @@ import {
   type Validation,
   type AddSurvey,
   type AddSurveyModel,
-  SurveyModel
+  type SurveyModel
 } from './add-survey-controller-protocols'
 import { AddSurveyController } from './add-survey-controller'
 import { ServerError } from '../../../errors'

@@ -65,7 +65,7 @@ const makeSut = (): SutTypes => {
   }
 }
 
-describe('DbAddAccount Usecase', () => {
+describe('DbAddSurvey Usecase', () => {
   test('Should call Hasher with correct password', async () => {
     const { sut, hasherStub } = makeSut()
 
