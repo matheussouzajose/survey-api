@@ -7,6 +7,19 @@
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/globalConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/globalConfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/account/add-account-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/account/add-account-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/account/load-account-by-email-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/account/load-account-by-email-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/authentication/db-authentication-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/authentication/db-authentication-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/models/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/models/account-model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/add-account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/add-account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/add-survey.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/add-survey.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/decorators/log-controller-decorator.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/decorators/log-controller-decorator.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +48,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/matheus/Courses/surveys/src/presentation/controllers/survey/add-survey",
+    "last_opened_file_path": "/home/matheus/Courses/surveys/src/domain/models",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,11 +62,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/domain/models" />
       <recent name="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey" />
       <recent name="$PROJECT_DIR$/src/presentation/errors" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/infra/criptography/jwt-adapter" />
-      <recent name="$PROJECT_DIR$/src/data/usecases/authentication" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/factories/controllers/access" />
