@@ -29,6 +29,8 @@ describe('Survey Mongo Repository', () => {
       answers: [{
         image: 'any_string',
         answer: 'any_answer'
+      }, {
+        answer: 'another_answer'
       }]
     })
 
@@ -38,6 +40,8 @@ describe('Survey Mongo Repository', () => {
     expect(account.answers).toEqual([{
       image: 'any_string',
       answer: 'any_answer'
+    }, {
+      answer: 'another_answer'
     }])
   })
 })
