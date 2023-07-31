@@ -13,8 +13,8 @@ export class DbLoadAccountByToken implements LoadAccountByTokenRepository {
     if (!result) {
       return null
     }
-
     const account = await this.loadAccountByEmailRepository.loadByToken(token, role)
+
     if (!account) {
       return null
     }

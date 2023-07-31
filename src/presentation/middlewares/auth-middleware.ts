@@ -16,7 +16,6 @@ export class AuthMiddleware implements Middleware {
       if (!accessToken || !accessToken.startsWith('Bearer ')) {
         return forbidden(new AccessDeniedError())
       }
-
       const account = await this.loadAccountByToken.loadByToken(accessToken.slice(7), this.role)
       if (!account) {
         return forbidden(new AccessDeniedError())

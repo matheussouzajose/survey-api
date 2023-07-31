@@ -7,14 +7,21 @@ export const adaptMiddleware = (middleware: Middleware) => {
     const httpRequest: HttpRequest = {
       headers: req.headers
     }
+
     const httpResponse = await middleware.handle(httpRequest)
     if ([200].includes(httpResponse.statusCode)) {
       Object.assign(req, httpResponse.body)
       next()
+      return
+    }
+
+    let message = httpResponse.body.message
+    if (httpResponse.body.stack.includes('JsonWebTokenError')) {
+      message = 'invalid format token'
     }
 
     return res.status(httpResponse.statusCode).json({
-      message: httpResponse.body.message
+      message
     })
   }
 }
