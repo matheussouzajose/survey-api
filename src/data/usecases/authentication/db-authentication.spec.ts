@@ -57,6 +57,7 @@ const makeUpdateAccessTokenRepositoryStub = (): UpdateAccessTokenRepository => {
 
   return new UpdateAccessTokenRepositoryStub()
 }
+
 const makeFakeAccount = (): AccountModel => ({
   id: 'any_id',
   name: 'any_name',
