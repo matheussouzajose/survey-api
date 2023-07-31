@@ -7,10 +7,21 @@
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/globalConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/globalConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/criptography/bcrypt-adapter/bcrypt-adapter.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/criptography/bcrypt-adapter/bcrypt-adapter.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/criptography/jwt-adapter/jwt-adapter.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/criptography/jwt-adapter/jwt-adapter.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/criptography/jwt-adapter/jwt-adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/criptography/jwt-adapter/jwt-adapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/load-account-by-token.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/load-account-by-token.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/adapters/express/express-route-adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/adapters/express-route-adapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/access/signin/signin-controller-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signin/signin-controller-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/access/signup/signup-controller-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signup/signup-controller-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/survey/add-survey/survey-controller-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/survey/add-survey/survey-controller-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/usecases/add-account/db-add-account-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/usecases/access/add-account/db-add-account-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/usecases/add-survey/db-add-survey-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/usecases/survey/add-survey/db-add-survey-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/usecases/authentication/db-authentication-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/usecases/access/authentication/db-authentication-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/routes/access-routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/access-routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/routes/survey-routes.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/survey-routes.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/routes/survey-routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/survey-routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +50,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/matheus/Courses/surveys/src/data/protocols/criptography",
+    "last_opened_file_path": "/home/matheus/Courses/surveys/src/main/factories/usecases/access",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,18 +64,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/factories/usecases/access" />
+      <recent name="$PROJECT_DIR$/src/main/factories/middlewares" />
+      <recent name="$PROJECT_DIR$/src/main/adapters" />
       <recent name="$PROJECT_DIR$/src/data/protocols/criptography" />
       <recent name="$PROJECT_DIR$/src/data/usecases/db-load-account-by-email" />
-      <recent name="$PROJECT_DIR$/src/data/protocols/db/account" />
-      <recent name="$PROJECT_DIR$/src/data/usecases" />
-      <recent name="$PROJECT_DIR$/src/presentation/middlewares" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/factories/usecases/access" />
+      <recent name="$PROJECT_DIR$/src/main/factories/usecases/survey" />
+      <recent name="$PROJECT_DIR$/src/main/adapters" />
       <recent name="$PROJECT_DIR$/src/main/factories/controllers/survey/add-survey" />
       <recent name="$PROJECT_DIR$/src/main/factories/controllers/access" />
-      <recent name="$PROJECT_DIR$/src/presentation/controllers/login2" />
-      <recent name="$PROJECT_DIR$/src/infra" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
