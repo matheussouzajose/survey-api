@@ -1,10 +1,19 @@
 import { type AddAccountRepository } from '../../../../data/protocols/db/account/add-account-repository'
 import { type AddAccountModel } from '../../../../domain/usecases/add-account'
-import { type AccountModel } from '../../../../domain/models/account'
+import { type AccountModel } from '../../../../domain/models/account-model'
 import { MongoHelper } from '../helpers/mongo-helper'
-import { type LoadAccountByEmailRepository, type UpdateAccessTokenRepository } from '../../../../data/protocols/db'
+import {
+  type LoadAccountByEmailRepository,
+  LoadAccountByTokenRepository,
+  type UpdateAccessTokenRepository
+} from '../../../../data/protocols/db/account'
 
-export class AccountMongoRepository implements AddAccountRepository, LoadAccountByEmailRepository, UpdateAccessTokenRepository {
+export class AccountMongoRepository implements
+  AddAccountRepository,
+  LoadAccountByEmailRepository,
+  UpdateAccessTokenRepository,
+  LoadAccountByTokenRepository
+{
   async add (accountData: AddAccountModel): Promise<AccountModel> {
     const accountCollection = await MongoHelper.getCollection('accounts')
     const result = await accountCollection.insertOne(accountData)
@@ -25,5 +34,18 @@ export class AccountMongoRepository implements AddAccountRepository, LoadAccount
         accessToken: token
       }
     })
+  }
+
+  async loadByToken (token: string, role?: string | undefined): Promise<AccountModel | null> {
+    const accountCollection = await MongoHelper.getCollection('accounts')
+    const account = await accountCollection.findOne({
+      accessToken: token,
+      $or: [{
+        role
+      }, {
+        role: 'admin'
+      }]
+    })
+    return account && MongoHelper.map(account)
   }
 }
