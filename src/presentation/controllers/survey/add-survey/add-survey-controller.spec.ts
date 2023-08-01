@@ -8,7 +8,7 @@ import {
 import { AddSurveyController } from './add-survey-controller'
 import { ServerError } from '../../../errors'
 import { badRequest, created, serverError } from '../../../helpers/http/http-helper'
-import * as MockDate from 'mockdate'
+import MockDate from 'mockdate'
 
 const makeValidation = (): Validation => {
   class ValidationStub implements Validation {
@@ -52,7 +52,8 @@ const makeFakeSurveyModel = (): SurveyModel => {
     answers: [{
       image: 'any_string',
       answer: 'any_answer'
-    }]
+    }],
+    date: new Date()
   }
 }
 
@@ -78,7 +79,7 @@ describe('AddSurvey Controller', () => {
     MockDate.set(new Date())
   })
 
-  beforeAll(() => {
+  afterAll(() => {
     MockDate.reset()
   })
   test('Should call Validation with correct value', async () => {
