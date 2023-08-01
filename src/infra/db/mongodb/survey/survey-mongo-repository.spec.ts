@@ -31,7 +31,8 @@ describe('Survey Mongo Repository', () => {
         answer: 'any_answer'
       }, {
         answer: 'another_answer'
-      }]
+      }],
+      date: new Date()
     })
 
     expect(account).toBeTruthy()
