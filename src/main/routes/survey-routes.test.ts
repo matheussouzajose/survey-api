@@ -2,9 +2,27 @@ import request from 'supertest'
 import app from '../config/app'
 import { MongoHelper } from '../../infra/db/mongodb/helpers/mongo-helper'
 import { type Collection } from 'mongodb'
-import { hash } from 'bcrypt'
 import { sign } from 'jsonwebtoken'
 import env from '../config/env'
+
+const makeAccessToken = async (): Promise<string> => {
+  const res = await accountCollection.insertOne({
+    name: 'Matheus',
+    email: 'matheus.jose@gmail.com',
+    role: 'admin'
+  })
+
+  const accessToken = sign(res.insertedId.toString(), env.jwtSecret)
+
+  await accountCollection.updateOne({
+    _id: res.insertedId
+  }, {
+    $set: {
+      accessToken
+    }
+  })
+  return accessToken
+}
 
 let surveyCollection: Collection
 let accountCollection: Collection
@@ -25,7 +43,7 @@ describe('Surveys Routes', () => {
     await accountCollection.deleteMany({})
   })
 
-  describe('POST /surveys', () => {
+  describe('GET /surveys', () => {
     test('Should return 403 an add survey without accessToken', async () => {
       await request(app)
         .post('/api/surveys')
@@ -42,22 +60,7 @@ describe('Surveys Routes', () => {
     })
 
     test('Should return 201 an add survey with accessToken', async () => {
-      const res = await accountCollection.insertOne({
-        name: 'Matheus',
-        email: 'matheus.jose@gmail.com',
-        role: 'admin'
-      })
-
-      const accessToken = sign(res.insertedId.toString(), env.jwtSecret)
-
-      await accountCollection.updateOne({
-        _id: res.insertedId
-      }, {
-        $set: {
-          accessToken
-        }
-      })
-
+      const accessToken = await makeAccessToken()
       await request(app)
         .post('/api/surveys')
         .set('authorization', `Bearer ${accessToken}`)
@@ -86,6 +89,41 @@ describe('Surveys Routes', () => {
             answer: 'any_answer'
           }]
         })
+        .expect(500)
+    })
+  })
+
+  describe('POST /surveys', () => {
+    test('Should return 403 an add survey without accessToken', async () => {
+      await request(app)
+        .get('/api/surveys')
+        .expect(403)
+    })
+
+    test('Should return 200 an load surveys with accessToken', async () => {
+      const accessToken = await makeAccessToken()
+
+      await surveyCollection.insertMany([
+        {
+          question: 'any_question',
+          answers: [{
+            image: 'any_string',
+            answer: 'any_answer'
+          }],
+          date: new Date()
+        }
+      ])
+
+      await request(app)
+        .get('/api/surveys')
+        .set('authorization', `Bearer ${accessToken}`)
+        .expect(200)
+    })
+
+    test('Should return 500 load surveys with invalid accessToken', async () => {
+      await request(app)
+        .post('/api/surveys')
+        .set('authorization', 'Bearer invalid.token')
         .expect(500)
     })
   })

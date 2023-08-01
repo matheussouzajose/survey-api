@@ -2,7 +2,11 @@ import { SurveyMongoRepository } from './survey-mongo-repository'
 import { MongoHelper } from '../helpers/mongo-helper'
 import { type Collection } from 'mongodb'
 
-let accountCollection: Collection
+const makeSut = (): SurveyMongoRepository => {
+  return new SurveyMongoRepository()
+}
+
+let surveyCollection: Collection
 describe('Survey Mongo Repository', () => {
   beforeAll(async () => {
     const uri = process.env.MONGO_URL ?? 'mongodb://localhost:27017/clean-node-api'
@@ -14,35 +18,69 @@ describe('Survey Mongo Repository', () => {
   })
 
   beforeEach(async () => {
-    accountCollection = await MongoHelper.getCollection('accounts')
-    await accountCollection.deleteMany({})
+    surveyCollection = await MongoHelper.getCollection('surveys')
+    await surveyCollection.deleteMany({})
   })
 
-  const makeSut = (): SurveyMongoRepository => {
-    return new SurveyMongoRepository()
-  }
+  describe('AddSurvey', () => {
+    test('Should return an add survey on add success', async () => {
+      const sut = makeSut()
+      const survey = await sut.add({
+        question: 'any_question',
+        answers: [{
+          image: 'any_string',
+          answer: 'any_answer'
+        }, {
+          answer: 'another_answer'
+        }],
+        date: new Date()
+      })
 
-  test('Should return an add survey on add success', async () => {
-    const sut = makeSut()
-    const account = await sut.add({
-      question: 'any_question',
-      answers: [{
+      expect(survey).toBeTruthy()
+      expect(survey.id).toBeTruthy()
+      expect(survey.question).toBe('any_question')
+      expect(survey.answers).toEqual([{
         image: 'any_string',
         answer: 'any_answer'
       }, {
         answer: 'another_answer'
-      }],
-      date: new Date()
+      }])
+    })
+  })
+
+  describe('LoadSurveys', () => {
+    test('Should load all surveys on success', async () => {
+      await surveyCollection.insertMany([
+        {
+          question: 'any_question',
+          answers: [{
+            image: 'any_string',
+            answer: 'any_answer'
+          }],
+          date: new Date()
+        },
+        {
+          question: 'other_question',
+          answers: [{
+            image: 'other_string',
+            answer: 'other_answer'
+          }],
+          date: new Date()
+        }
+      ])
+      const sut = makeSut()
+      const surveys = await sut.loadAll()
+
+      expect(surveys.length).toBe(2)
+      expect(surveys[0].question).toBe('any_question')
+      expect(surveys[1].question).toBe('other_question')
     })
 
-    expect(account).toBeTruthy()
-    expect(account.id).toBeTruthy()
-    expect(account.question).toBe('any_question')
-    expect(account.answers).toEqual([{
-      image: 'any_string',
-      answer: 'any_answer'
-    }, {
-      answer: 'another_answer'
-    }])
+    test('Should return empty list', async () => {
+      const sut = makeSut()
+      const surveys = await sut.loadAll()
+
+      expect(surveys.length).toBe(0)
+    })
   })
 })
