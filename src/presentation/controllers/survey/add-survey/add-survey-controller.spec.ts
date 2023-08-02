@@ -57,7 +57,7 @@ const makeFakeSurveyModel = (): SurveyModel => {
   }
 }
 
-interface SutTypes {
+type SutTypes = {
   sut: AddSurveyController
   validationStub: Validation
   addSurveyStub: AddSurvey
