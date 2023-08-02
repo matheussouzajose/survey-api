@@ -1,5 +1,5 @@
 import { EmailValidation } from './email-validation'
-import { type EmailValidator } from '../protocols/email-validator'
+import { type EmailValidator } from '@/validation/protocols/email-validator'
 
 const makeEmailValidator = (): EmailValidator => {
   class EmailValidatorStub implements EmailValidator {

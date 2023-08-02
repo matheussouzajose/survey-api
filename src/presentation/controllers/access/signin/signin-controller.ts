@@ -1,6 +1,6 @@
-import { badRequest, ok, serverError, unauthorized } from '../../../helpers/http/http-helper'
+import { badRequest, ok, serverError, unauthorized } from '@/presentation/helpers/http/http-helper'
 import { type Controller, type HttpRequest, type HttpResponse, type Authentication } from './signin-controller-protocols'
-import { type Validation } from '../../../protocols'
+import { type Validation } from '@/presentation/protocols'
 
 export class SignInController implements Controller {
   constructor (private readonly authentication: Authentication, private readonly validation: Validation) {

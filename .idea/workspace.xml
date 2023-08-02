@@ -5,21 +5,98 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/globalConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/globalConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/db-load-account-by-email/db-load-account-by-token-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token-protocols.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/db-load-account-by-email/db-load-account-by-token.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/db-load-account-by-email/db-load-account-by-token.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/account/add-account-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/account/add-account-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/account/load-account-by-email-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/account/load-account-by-email-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/account/load-account-by-token-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/account/load-account-by-token-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/survey/add-survey-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/survey/add-survey-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/survey/load-surveys-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/survey/load-surveys-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/authentication/db-authentication-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/authentication/db-authentication-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/load-surveys/db-load-surveys-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-surveys/db-load-surveys-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/add-account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/add-account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/add-survey.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/add-survey.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/load-account-by-token.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/load-account-by-token.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/load-surveys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/load-surveys.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/criptography/bcrypt-adapter/bcrypt-adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/criptography/bcrypt-adapter/bcrypt-adapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/criptography/jwt-adapter/jwt-adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/criptography/jwt-adapter/jwt-adapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/log/log-mongo-repository.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/log/log-mongo-repository.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/log/log-mongo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/log/log-mongo-repository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/survey/survey-mongo-repository.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/survey/survey-mongo-repository.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/survey/survey-mongo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/survey/survey-mongo-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/validators/email-validator-adapter.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/validators/email-validator-adapter.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/adapters/express-middleware-adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/adapters/express-middleware-adapter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/adapters/express-route-adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/adapters/express-route-adapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/config/middlewares.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/middlewares.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/decorators/log-controller-decorator.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/decorators/log-controller-decorator.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/access/signin/signin-controller-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signin/signin-controller-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/access/signin/signin-validation-factory.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signin/signin-validation-factory.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/access/signin/signin-validation-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signin/signin-validation-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/access/signup/signup-controller-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signup/signup-controller-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/access/signup/signup-validation-factory.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signup/signup-validation-factory.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/access/signup/signup-validation-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/access/signup/signup-validation-factory.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/survey/add-survey/survey-controller-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/survey/add-survey/survey-controller-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/survey/add-survey/survey-validation-factory.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/survey/add-survey/survey-validation-factory.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/survey/add-survey/survey-validation-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/survey/add-survey/survey-validation-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/survey/load-surveys/load-surveys-controller-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/survey/load-surveys/load-surveys-controller-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/decorators/log-controller-decorator-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/decorators/log-controller-decorator-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/middlewares/auth-middleware-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/middlewares/auth-middleware-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/usecases/access/add-account/db-add-account-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/usecases/access/add-account/db-add-account-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/usecases/access/authentication/db-authentication-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/usecases/access/authentication/db-authentication-factory.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/factories/usecases/access/load-account-by-token/db-load-account-by-token-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/usecases/access/load-account-by-token/db-load-account-by-token-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/usecases/survey/add-survey/db-add-survey-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/usecases/survey/add-survey/db-add-survey-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/usecases/survey/load-surveys/db-load-surveys-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/usecases/survey/load-surveys/db-load-surveys-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/middlewares/admin-auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/middlewares/admin-auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/middlewares/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/middlewares/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/middlewares/body-parser.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/middlewares/body-parser.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/middlewares/content-type.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/middlewares/content-type.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/middlewares/cors.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/middlewares/cors.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/routes/access-routes.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/access-routes.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/routes/survey-routes.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/survey-routes.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/routes/survey-routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/survey-routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/access/signin/signin-controller-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signin/signin-controller-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/access/signin/signin-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signin/signin-controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/access/signin/signin-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signin/signin-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/load-surveys/load-surveys-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/load-surveys/load-surveys-controller.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/load-surveys/load-surveys-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/load-surveys/load-surveys-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/load-surveys/load-surveys-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/load-surveys/load-surveys-protocols.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presentation/helpers/http/http-helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/helpers/http/http-helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/protocols/email-validator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/validators/compare-fields-validation.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/compare-fields-validation.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/validators/compare-fields-validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/compare-fields-validation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/validators/email-validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/email-validation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/validators/email-validator.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/email-validator.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/validators/required-field-validation.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/required-field-validation.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/validators/required-field-validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/required-field-validation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/validators/validation-composite.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/validation-composite.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/validators/validation-composite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/validation-composite.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.eslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +125,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/matheus/Courses/surveys/src/main/middlewares",
+    "last_opened_file_path": "/home/matheus/Courses/surveys",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,11 +139,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/middlewares" />
       <recent name="$PROJECT_DIR$/src/main/factories/usecases/survey/load-surveys" />
       <recent name="$PROJECT_DIR$/src/main/factories/controllers/survey/load-surveys" />
       <recent name="$PROJECT_DIR$/src/data/protocols/db/survey" />
-      <recent name="$PROJECT_DIR$/src/data/usecases" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/factories/usecases/access" />

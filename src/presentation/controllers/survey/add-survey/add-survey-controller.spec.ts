@@ -6,8 +6,8 @@ import {
   type SurveyModel
 } from './add-survey-controller-protocols'
 import { AddSurveyController } from './add-survey-controller'
-import { ServerError } from '../../../errors'
-import { badRequest, created, serverError } from '../../../helpers/http/http-helper'
+import { ServerError } from '@/presentation/errors'
+import { badRequest, created, serverError } from '@/presentation/helpers/http/http-helper'
 import MockDate from 'mockdate'
 
 const makeValidation = (): Validation => {
