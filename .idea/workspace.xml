@@ -6,9 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/criptography/jwt-adapter/jwt-adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/criptography/jwt-adapter/jwt-adapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/log/log-mongo-repository.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/log/log-mongo-repository.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/survey/survey-mongo-repository.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/survey/survey-mongo-repository.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/survey/survey-mongo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/survey/survey-mongo-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/validators/email-validator-adapter.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/validators/email-validator-adapter.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/infra/validators/email-validator-adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/validators/email-validator-adapter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/decorators/log-controller-decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/decorators/log-controller-decorator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/routes/access-routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/routes/access-routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
