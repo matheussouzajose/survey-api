@@ -7,24 +7,16 @@
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/globalConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/globalConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-account/db-add-account.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/add-survey/db-add-survey.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/authentication/db-authentication.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/authentication/db-authentication.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-account-by-email/db-load-account-by-token.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/load-surveys/db-load-surveys.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-surveys/db-load-surveys.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/load-surveys/db-load-surveys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-surveys/db-load-surveys.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/models/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/models/account.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/models/survey.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/models/survey.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/survey/survey-mongo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/survey/survey-mongo-repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/decorators/log-controller-decorator.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/decorators/log-controller-decorator.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/load-surveys/load-surveys-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/load-surveys/load-surveys-controller.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/account/add-account-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/account/add-account-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/account/load-account-by-email-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/account/load-account-by-email-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/account/load-account-by-token-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/account/load-account-by-token-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/survey/add-survey-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/survey/add-survey-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/survey/load-surveys-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/survey/load-surveys-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/load-surveys/db-load-surveys-protocols.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-surveys/db-load-survey-by-id-protocols.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/load-surveys/db-load-surveys.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-surveys/db-load-survey-by-id.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/load-surveys/db-load-surveys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/load-surveys/db-load-survey-by-id.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/load-survey-by-id.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/load-survey-by-id.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/usecases/survey/load-surveys/db-load-surveys-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/usecases/survey/load-surveys/db-load-surveys-factory.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +45,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/matheus/Courses/surveys/src/domain/usecases",
+    "last_opened_file_path": "/home/matheus/Courses/surveys/src/data/protocols/db/survey",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,11 +59,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data/protocols/db/survey" />
+      <recent name="$PROJECT_DIR$/src/data/usecases" />
       <recent name="$PROJECT_DIR$/src/domain/usecases" />
       <recent name="$PROJECT_DIR$/src/domain/models" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/main/middlewares" />
-      <recent name="$PROJECT_DIR$/src/main/factories/usecases/survey/load-surveys" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/factories/usecases/access" />
@@ -97,7 +89,7 @@
       <workItem from="1689632744315" duration="117001000" />
       <workItem from="1690155890404" duration="388000" />
       <workItem from="1690156286297" duration="60945000" />
-      <workItem from="1691024863486" duration="1593000" />
+      <workItem from="1691024863486" duration="3364000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ensure SignUpController an error if no name is provided">
       <option name="closed" value="true" />

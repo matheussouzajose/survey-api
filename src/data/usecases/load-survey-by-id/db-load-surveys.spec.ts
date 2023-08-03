@@ -59,14 +59,14 @@ describe('DbLoadSurveys UseCase', () => {
   test('Should return null if LoadSurveysRepository return null', async () => {
     const { sut, loadSurveysRepositoryStub } = makeSut()
     jest.spyOn(loadSurveysRepositoryStub, 'loadAll').mockReturnValueOnce(Promise.resolve([]))
-    const account = await sut.loadAll()
-    expect(account).toEqual([])
+    const surveys = await sut.loadAll()
+    expect(surveys).toEqual([])
   })
 
   test('Should return an account on success', async () => {
     const { sut } = makeSut()
-    const account = await sut.loadAll()
-    expect(account).toEqual(makeFakeSurveys())
+    const surveys = await sut.loadAll()
+    expect(surveys).toEqual(makeFakeSurveys())
   })
 
   test('Should throw if LoadSurveysRepository throws', async () => {
