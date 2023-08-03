@@ -1,5 +1,5 @@
 import { type LoadAccountByTokenRepository } from '@/data/protocols/db/account'
-import { type Account, type Decrypter } from './db-load-account-by-token-protocols'
+import { type AccountModel, type Decrypter } from './db-load-account-by-token-protocols'
 import { DbLoadAccountByToken } from './db-load-account-by-token'
 
 const makeDecrypterStub = (): Decrypter => {
@@ -14,7 +14,7 @@ const makeDecrypterStub = (): Decrypter => {
 
 const makeLoadAccountByTokenRepositoryStub = (): LoadAccountByTokenRepository => {
   class LoadAccountByTokenRepositoryStub implements LoadAccountByTokenRepository {
-    async loadByToken (email: string): Promise<Account | null> {
+    async loadByToken (email: string): Promise<AccountModel | null> {
       return await new Promise(resolve => {
         resolve(makeFakeAccount())
       })
@@ -24,7 +24,7 @@ const makeLoadAccountByTokenRepositoryStub = (): LoadAccountByTokenRepository =>
   return new LoadAccountByTokenRepositoryStub()
 }
 
-const makeFakeAccount = (): Account => ({
+const makeFakeAccount = (): AccountModel => ({
   id: 'valid_id',
   name: 'valid_name',
   email: 'valid_email@mail.com',

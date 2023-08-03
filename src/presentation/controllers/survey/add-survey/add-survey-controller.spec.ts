@@ -3,7 +3,7 @@ import {
   type Validation,
   type AddSurvey,
   type AddSurveyModel,
-  type Survey
+  type SurveyModel
 } from './add-survey-controller-protocols'
 import { AddSurveyController } from './add-survey-controller'
 import { ServerError } from '@/presentation/errors'
@@ -45,7 +45,7 @@ const makeFakeHttpRequest = (): HttpRequest => {
   }
 }
 
-const makeFakeSurveyModel = (): Survey => {
+const makeFakeSurveyModel = (): SurveyModel => {
   return {
     id: 'any_id',
     question: 'any_question',

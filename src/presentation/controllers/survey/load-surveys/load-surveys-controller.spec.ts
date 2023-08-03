@@ -1,10 +1,10 @@
 import { LoadSurveysController } from './load-surveys-controller'
-import { type LoadSurveys, type Survey } from './load-surveys-protocols'
+import { type LoadSurveys, type SurveyModel } from './load-surveys-protocols'
 import MockDate from 'mockdate'
 import { noContent, ok, serverError } from '@/presentation/helpers/http/http-helper'
 import { ServerError } from '@/presentation/errors'
 
-const makeFakeSurveys = (): Survey[] => {
+const makeFakeSurveys = (): SurveyModel[] => {
   return [{
     id: 'any_id',
     question: 'any_question',
@@ -27,7 +27,7 @@ const makeFakeSurveys = (): Survey[] => {
 
 const makeLoadSurveysStub = (): LoadSurveys => {
   class LoadSurveysStub implements LoadSurveys {
-    async loadAll (): Promise<Survey[]> {
+    async loadAll (): Promise<SurveyModel[]> {
       return makeFakeSurveys()
     }
   }

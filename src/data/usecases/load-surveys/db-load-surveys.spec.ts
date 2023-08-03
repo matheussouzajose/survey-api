@@ -1,9 +1,9 @@
 import { DbLoadSurveys } from './db-load-surveys'
-import { type Survey, type LoadSurveysRepository } from './db-load-surveys-protocols'
+import { type SurveyModel, type LoadSurveysRepository } from './db-load-surveys-protocols'
 
 const makeLoadSurveysRepositoryStub = (): LoadSurveysRepository => {
   class LoadSurveysRepositoryStub implements LoadSurveysRepository {
-    async loadAll (): Promise<Survey[]> {
+    async loadAll (): Promise<SurveyModel[]> {
       return await new Promise(resolve => {
         resolve(makeFakeSurveys())
       })
@@ -13,7 +13,7 @@ const makeLoadSurveysRepositoryStub = (): LoadSurveysRepository => {
   return new LoadSurveysRepositoryStub()
 }
 
-const makeFakeSurveys = (): Survey[] => {
+const makeFakeSurveys = (): SurveyModel[] => {
   return [{
     id: 'any_id',
     question: 'any_question',
