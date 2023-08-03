@@ -1,6 +1,5 @@
 import { DbLoadSurveyById } from './db-load-survey-by-id'
 import { type LoadSurveyByIdRepository } from '@/data/protocols/db/survey/load-survey-by-id-repository'
-import { type SurveyResultModel } from '@/domain/models/survey-result'
 import { type SurveyModel } from '@/domain/models/survey'
 
 const makeLoadSurveyByIdRepositoryStub = (): LoadSurveyByIdRepository => {
@@ -41,7 +40,7 @@ const makeSut = (): SutTypes => {
   }
 }
 
-describe('DbLoadSurveyById UseCase', () => {
+describe('DbSaveSurveyResult UseCase', () => {
   test('Should call LoadSurveyByIdRepository with correct value', async () => {
     const { sut, loadSurveyByIdRepositoryStub } = makeSut()
     const loadById = jest.spyOn(loadSurveyByIdRepositoryStub, 'loadById')
