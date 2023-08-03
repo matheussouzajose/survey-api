@@ -48,7 +48,7 @@ const makeSut = (): SutTypes => {
   }
 }
 
-describe('DbLoadSurveys UseCase', () => {
+describe('DbSaveSurveyResult UseCase', () => {
   test('Should call LoadSurveysRepository with correct value', async () => {
     const { sut, loadSurveysRepositoryStub } = makeSut()
     const loadSpy = jest.spyOn(loadSurveysRepositoryStub, 'loadAll')
