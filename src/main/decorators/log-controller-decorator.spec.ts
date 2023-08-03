@@ -2,7 +2,7 @@ import { LogControllerDecorator } from './log-controller-decorator'
 import { type Controller, type HttpRequest, type HttpResponse } from '@/presentation/protocols'
 import { created, serverError } from '@/presentation/helpers/http/http-helper'
 import { type LogErrorRepository } from '@/data/protocols/db/log/log-error-repository'
-import { type AccountModel } from '@/domain/models/account-model'
+import { type Account } from '@/domain/models/account'
 
 const makeControllerStub = (): Controller => {
   class ControllerStub implements Controller {
@@ -39,7 +39,7 @@ const makeFakeRequest = (): HttpRequest => {
   }
 }
 
-const makeFakeAccount = (): AccountModel => {
+const makeFakeAccount = (): Account => {
   return {
     id: 'valid_id',
     name: 'valid_name',

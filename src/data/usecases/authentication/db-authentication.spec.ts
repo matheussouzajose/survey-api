@@ -2,7 +2,7 @@ import { DbAuthentication } from './db-authentication'
 import {
   type Authentication,
   type AuthenticationModel,
-  type AccountModel,
+  type Account,
   type HashComparer,
   type Encrypter,
   type UpdateAccessTokenRepository,
@@ -11,7 +11,7 @@ import {
 
 const makeLoadAccountByEmailRepositoryStub = (): LoadAccountByEmailRepository => {
   class LoadAccountByEmailRepositoryStub implements LoadAccountByEmailRepository {
-    async loadByEmail (email: string): Promise<AccountModel | null> {
+    async loadByEmail (email: string): Promise<Account | null> {
       return await new Promise(resolve => {
         resolve(makeFakeAccount())
       })
@@ -58,7 +58,7 @@ const makeUpdateAccessTokenRepositoryStub = (): UpdateAccessTokenRepository => {
   return new UpdateAccessTokenRepositoryStub()
 }
 
-const makeFakeAccount = (): AccountModel => ({
+const makeFakeAccount = (): Account => ({
   id: 'any_id',
   name: 'any_name',
   email: 'any_email@email.com',

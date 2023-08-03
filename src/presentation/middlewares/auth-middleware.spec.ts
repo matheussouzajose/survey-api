@@ -1,5 +1,5 @@
 import { AuthMiddleware } from './auth-middleware'
-import { type HttpRequest, type LoadAccountByToken, type AccountModel } from './auth-middleware-protocols'
+import { type HttpRequest, type LoadAccountByToken, type Account } from './auth-middleware-protocols'
 import { forbidden, ok, serverError } from '@/presentation/helpers/http/http-helper'
 import { AccessDeniedError } from '@/presentation/errors'
 
@@ -11,7 +11,7 @@ const makeFakeHttpRequest = (): HttpRequest => {
   }
 }
 
-const makeFakeAccount = (): AccountModel => ({
+const makeFakeAccount = (): Account => ({
   id: 'any_id',
   name: 'any_name',
   email: 'any_email@email.com',
@@ -19,7 +19,7 @@ const makeFakeAccount = (): AccountModel => ({
 })
 const makeLoadAccountByTokenStub = (): LoadAccountByToken => {
   class LoadAccountByTokenStub {
-    async loadByToken (token: string, role: string): Promise<AccountModel> {
+    async loadByToken (token: string, role: string): Promise<Account> {
       return await new Promise(resolve => { resolve(makeFakeAccount()) })
     }
   }
