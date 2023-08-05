@@ -6,7 +6,7 @@ import {
   type Validation
 } from './signup-controller-protocols'
 import { badRequest, created, forbidden, serverError } from '@/presentation/helpers/http/http-helper'
-import { type Authentication } from '@/domain/usecases/authentication'
+import { type Authentication } from '@/domain/usecases/account/authentication'
 import { EmailInUseError } from '@/presentation/errors/email-in-use-error'
 
 export class SignUpController implements Controller {

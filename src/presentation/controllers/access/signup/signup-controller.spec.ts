@@ -8,7 +8,7 @@ import {
   type Validation
 } from './signup-controller-protocols'
 import { badRequest, created, forbidden, serverError } from '@/presentation/helpers/http/http-helper'
-import { type Authentication, type AuthenticationModel } from '@/domain/usecases/authentication'
+import { type Authentication, type AuthenticationModel } from '@/domain/usecases/account/authentication'
 import { EmailInUseError } from '@/presentation/errors/email-in-use-error'
 
 const makeAddAccount = (): AddAccount => {
