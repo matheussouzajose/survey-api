@@ -1,20 +1,8 @@
 import { DbLoadSurveyById } from './db-load-survey-by-id'
 import { type LoadSurveyByIdRepository } from '@/data/protocols/db/survey/load-survey-by-id-repository'
-import { type SurveyModel } from '@/domain/models/survey'
 import { throwError } from '@/domain/test/test-helpers'
 import { mockSurveyModel } from '@/domain/test/mock-survey'
-
-const makeLoadSurveyByIdRepositoryStub = (): LoadSurveyByIdRepository => {
-  class LoadSurveyByIdRepositoryStub implements LoadSurveyByIdRepository {
-    async loadById (id: string): Promise<SurveyModel | null> {
-      return await new Promise(resolve => {
-        resolve(mockSurveyModel())
-      })
-    }
-  }
-
-  return new LoadSurveyByIdRepositoryStub()
-}
+import { mockLoadSurveyByIdRepository } from '@/data/test/db-survey'
 
 type SutTypes = {
   sut: DbLoadSurveyById
@@ -22,7 +10,7 @@ type SutTypes = {
 }
 
 const makeSut = (): SutTypes => {
-  const loadSurveyByIdRepositoryStub = makeLoadSurveyByIdRepositoryStub()
+  const loadSurveyByIdRepositoryStub = mockLoadSurveyByIdRepository()
   const sut = new DbLoadSurveyById(loadSurveyByIdRepositoryStub)
   return {
     sut,
