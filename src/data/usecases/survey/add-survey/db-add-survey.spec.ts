@@ -7,12 +7,12 @@ import { throwError } from '@/domain/test/test-helpers'
 import { mockAddSurveyParams, mockSurveyModel } from '@/domain/test/mock-survey'
 
 const makeAddSurveyRepository = (): AddSurveyRepository => {
-  class AddAccountRepositoryStub implements AddSurveyRepository {
+  class AddSurveyRepositoryStub implements AddSurveyRepository {
     async add (survey: AddSurveyParams): Promise<SurveyModel> {
       return await new Promise(resolve => { resolve(mockSurveyModel()) })
     }
   }
-  return new AddAccountRepositoryStub()
+  return new AddSurveyRepositoryStub()
 }
 
 type SutTypes = {

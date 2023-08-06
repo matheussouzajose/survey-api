@@ -1,33 +1,11 @@
 import { type Hasher } from '@/data/protocols/criptography/hasher'
 import { type AddAccountRepository } from '@/data/protocols/db/account/add-account-repository'
-import { type AddAccountParams } from '@/domain/usecases/account/add-account'
-import { type AccountModel } from '@/domain/models/account'
 import { type LoadAccountByEmailRepository } from '@/data/protocols/db/account/load-account-by-email-repository'
 import { DbAddAccount } from '@/data/usecases/account/add-account/db-add-account'
 import { mockAccountModel, mockAddAccountParams } from '@/domain/test/mock-account'
 import { throwError } from '@/domain/test/test-helpers'
 import { mockHasher } from '@/data/test/criptography'
-
-const makeAddAccountRepository = (): AddAccountRepository => {
-  class AddAccountRepositoryStub implements AddAccountRepository {
-    async add (accountData: AddAccountParams): Promise<AccountModel> {
-      return await new Promise(resolve => { resolve(mockAccountModel()) })
-    }
-  }
-  return new AddAccountRepositoryStub()
-}
-
-const makeLoadAccountByEmailRepositoryStub = (): LoadAccountByEmailRepository => {
-  class LoadAccountByEmailRepositoryStub implements LoadAccountByEmailRepository {
-    async loadByEmail (email: string): Promise<AccountModel | null> {
-      return await new Promise(resolve => {
-        resolve(null)
-      })
-    }
-  }
-
-  return new LoadAccountByEmailRepositoryStub()
-}
+import { mockAddAccountRepository, mockLoadAccountByEmailRepository } from '@/data/test/db-account'
 
 type SutTypes = {
   sut: DbAddAccount
@@ -38,8 +16,8 @@ type SutTypes = {
 
 const makeSut = (): SutTypes => {
   const hasherStub = mockHasher()
-  const addAccountRepositoryStub = makeAddAccountRepository()
-  const loadAccountByEmailRepositoryStub = makeLoadAccountByEmailRepositoryStub()
+  const addAccountRepositoryStub = mockAddAccountRepository()
+  const loadAccountByEmailRepositoryStub = mockLoadAccountByEmailRepository(null)
   const sut = new DbAddAccount(hasherStub, addAccountRepositoryStub, loadAccountByEmailRepositoryStub)
   return {
     sut,
