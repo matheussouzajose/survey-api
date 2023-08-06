@@ -1,7 +1,7 @@
-import {type Collection} from 'mongodb'
-import {MongoHelper} from '@/infra/db/mongodb/helpers/mongo-helper'
-import {SurveyResultMongoRepository} from './survey-result-mongo-repository'
-import {SurveyModel} from "@/domain/models/survey";
+import { type Collection } from 'mongodb'
+import { MongoHelper } from '@/infra/db/mongodb/helpers/mongo-helper'
+import { SurveyResultMongoRepository } from './survey-result-mongo-repository'
+import { type SurveyModel } from '@/domain/models/survey'
 
 const makeSut = (): SurveyResultMongoRepository => {
   return new SurveyResultMongoRepository()

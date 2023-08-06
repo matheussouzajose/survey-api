@@ -1,6 +1,6 @@
 import { type Router } from 'express'
-import { adaptRoute } from '@/main/adapters/express-route-adapter'
 import { adminAuth } from '@/main/middlewares/admin-auth'
+import { adaptRoute } from '@/main/adapters/express-route-adapter'
 import {
   makeSaveSurveyResultController
 } from '@/main/factories/controllers/survey-result/save-surver-result/save-survey-result-controller-factory'

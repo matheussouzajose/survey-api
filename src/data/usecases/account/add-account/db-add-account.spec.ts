@@ -1,11 +1,9 @@
-import { type LoadAccountByEmailRepository } from '@/data/protocols/db/account'
-import { DbAddAccount } from './db-add-account'
-import {
-  type AccountModel,
-  type AddAccountParams,
-  type Hasher,
-  type AddAccountRepository
-} from './db-add-account-protocols'
+import { type Hasher } from '@/data/protocols/criptography/hasher'
+import { type AddAccountRepository } from '@/data/protocols/db/account/add-account-repository'
+import { type AddAccountParams } from '@/domain/usecases/account/add-account'
+import { type AccountModel } from '@/domain/models/account'
+import { type LoadAccountByEmailRepository } from '@/data/protocols/db/account/load-account-by-email-repository'
+import { DbAddAccount } from '@/data/usecases/account/add-account/db-add-account'
 
 const makeHasher = (): Hasher => {
   class HasherStub implements Hasher {

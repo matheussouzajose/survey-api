@@ -1,6 +1,6 @@
 import { type Collection } from 'mongodb'
 import { MongoHelper } from '@/infra/db/mongodb/helpers/mongo-helper'
-import { AccountMongoRepository } from './account-mongo-repository'
+import { AccountMongoRepository } from '@/infra/db/mongodb/account/account-mongo-repository'
 
 let accountCollection: Collection
 describe('Account Mongo Repository', () => {
@@ -37,7 +37,6 @@ describe('Account Mongo Repository', () => {
       expect(account.email).toBe('any_email@mail.com')
       expect(account.password).toBe('any_password')
     })
-
   })
 
   describe('loadByEmail()', () => {

@@ -1,8 +1,6 @@
-import {
-  type SaveSurveyResultParams,
-  type SurveyResultModel,
-  type SaveSurveyResultRepository
-} from './db-save-survey-result-protocols'
+import { type SaveSurveyResultRepository } from '@/data/protocols/db/survey-result/save-survey-result-repository'
+import { type SaveSurveyResultParams } from '@/domain/usecases/survey-result/save-survey-result'
+import { type SurveyResultModel } from '@/domain/models/survey-result'
 import { DbSaveSurveyResult } from '@/data/usecases/survey-result/save-survey-result/db-save-survey-result'
 import MockDate from 'mockdate'
 

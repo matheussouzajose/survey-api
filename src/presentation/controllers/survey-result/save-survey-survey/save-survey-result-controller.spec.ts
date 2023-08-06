@@ -1,14 +1,15 @@
-import {
-  type HttpRequest,
-  type SurveyModel
-} from './save-survey-result-protocols'
-import { SaveSurveyResultController } from './save-survey-result-controller'
-import { type LoadSurveysById } from '@/domain/usecases/survey/load-survey-by-id'
-import { InvalidParamError, ServerError } from '@/presentation/errors'
-import { forbidden, ok, serverError } from '@/presentation/helpers/http/http-helper'
 import { type SaveSurveyResult, type SaveSurveyResultParams } from '@/domain/usecases/survey-result/save-survey-result'
 import { type SurveyResultModel } from '@/domain/models/survey-result'
+import { type LoadSurveysById } from '@/domain/usecases/survey/load-survey-by-id'
+import { type SurveyModel } from '@/domain/models/survey'
+import { type HttpRequest } from '@/presentation/protocols/http'
+import {
+  SaveSurveyResultController
+} from '@/presentation/controllers/survey-result/save-survey-survey/save-survey-result-controller'
 import MockDate from 'mockdate'
+import { forbidden, ok, serverError } from '@/presentation/helpers/http/http-helper'
+import { InvalidParamError } from '@/presentation/errors/invalid-param-error'
+import { ServerError } from '@/presentation/errors/server-error'
 
 const makeSaveSurveyResult = (): SaveSurveyResult => {
   class AddSurveyStub implements SaveSurveyResult {

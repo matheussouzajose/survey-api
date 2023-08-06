@@ -1,7 +1,9 @@
-import { AuthMiddleware } from './auth-middleware'
-import { type HttpRequest, type LoadAccountByToken, type AccountModel } from './auth-middleware-protocols'
+import { type HttpRequest } from '@/presentation/protocols/http'
+import { type AccountModel } from '@/domain/models/account'
+import { type LoadAccountByToken } from '@/domain/usecases/account/load-account-by-token'
+import { AuthMiddleware } from '@/presentation/middlewares/auth-middleware'
 import { forbidden, ok, serverError } from '@/presentation/helpers/http/http-helper'
-import { AccessDeniedError } from '@/presentation/errors'
+import { AccessDeniedError } from '@/presentation/errors/access-denied-error'
 
 const makeFakeHttpRequest = (): HttpRequest => {
   return {

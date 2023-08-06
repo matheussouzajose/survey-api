@@ -1,14 +1,11 @@
-import {
-  type HttpRequest,
-  type Validation,
-  type AddSurvey,
-  type AddSurveyParams,
-  type SurveyModel
-} from './add-survey-controller-protocols'
-import { AddSurveyController } from './add-survey-controller'
-import { ServerError } from '@/presentation/errors'
-import { badRequest, created, serverError } from '@/presentation/helpers/http/http-helper'
+import { type Validation } from '@/presentation/protocols/validation'
+import { type AddSurvey, type AddSurveyParams } from '@/domain/usecases/survey/add-survey'
+import { type HttpRequest } from '@/presentation/protocols/http'
+import { type SurveyModel } from '@/domain/models/survey'
+import { AddSurveyController } from '@/presentation/controllers/survey/add-survey/add-survey-controller'
 import MockDate from 'mockdate'
+import { badRequest, created, serverError } from '@/presentation/helpers/http/http-helper'
+import { ServerError } from '@/presentation/errors/server-error'
 
 const makeValidation = (): Validation => {
   class ValidationStub implements Validation {

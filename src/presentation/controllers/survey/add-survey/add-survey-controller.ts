@@ -1,10 +1,7 @@
-import {
-  type AddSurvey,
-  type Controller,
-  type HttpRequest,
-  type HttpResponse,
-  type Validation
-} from './add-survey-controller-protocols'
+import { type Controller } from '@/presentation/protocols/controller'
+import { type Validation } from '@/presentation/protocols/validation'
+import { type AddSurvey } from '@/domain/usecases/survey/add-survey'
+import { type HttpRequest, type HttpResponse } from '@/presentation/protocols/http'
 import { badRequest, created, serverError } from '@/presentation/helpers/http/http-helper'
 
 export class AddSurveyController implements Controller {

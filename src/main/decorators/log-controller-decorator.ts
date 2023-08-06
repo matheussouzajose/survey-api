@@ -1,5 +1,6 @@
-import { type Controller, type HttpRequest, type HttpResponse } from '@/presentation/protocols'
+import { type Controller } from '@/presentation/protocols/controller'
 import { type LogErrorRepository } from '@/data/protocols/db/log/log-error-repository'
+import { type HttpRequest, type HttpResponse } from '@/presentation/protocols/http'
 
 export class LogControllerDecorator implements Controller {
   constructor (private readonly controller: Controller, private readonly logErrorRepository: LogErrorRepository) {

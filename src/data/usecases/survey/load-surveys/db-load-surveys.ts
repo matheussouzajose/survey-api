@@ -1,4 +1,5 @@
-import { type SurveyModel, type LoadSurveysRepository } from './db-load-surveys-protocols'
+import { type LoadSurveysRepository } from '@/data/protocols/db/survey/load-surveys-repository'
+import { type SurveyModel } from '@/domain/models/survey'
 
 export class DbLoadSurveys implements LoadSurveysRepository {
   constructor (

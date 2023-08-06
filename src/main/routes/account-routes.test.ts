@@ -1,7 +1,7 @@
+import { type Collection } from 'mongodb'
+import { MongoHelper } from '@/infra/db/mongodb/helpers/mongo-helper'
 import request from 'supertest'
 import app from '@/main/config/app'
-import { MongoHelper } from '@/infra/db/mongodb/helpers/mongo-helper'
-import { type Collection } from 'mongodb'
 import { hash } from 'bcrypt'
 
 let accountCollection: Collection

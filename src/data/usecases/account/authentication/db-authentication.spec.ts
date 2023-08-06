@@ -1,13 +1,10 @@
-import { DbAuthentication } from './db-authentication'
-import {
-  type Authentication,
-  type AuthenticationParams,
-  type AccountModel,
-  type HashComparer,
-  type Encrypter,
-  type UpdateAccessTokenRepository,
-  type LoadAccountByEmailRepository
-} from './db-authentication-protocols'
+import { type LoadAccountByEmailRepository } from '@/data/protocols/db/account/load-account-by-email-repository'
+import { type AccountModel } from '@/domain/models/account'
+import { type HashComparer } from '@/data/protocols/criptography/hash-comparer'
+import { type Encrypter } from '@/data/protocols/criptography/encrypter'
+import { type UpdateAccessTokenRepository } from '@/data/protocols/db/account/update-access-token-repository'
+import { type Authentication, type AuthenticationParams } from '@/domain/usecases/account/authentication'
+import { DbAuthentication } from '@/data/usecases/account/authentication/db-authentication'
 
 const makeLoadAccountByEmailRepositoryStub = (): LoadAccountByEmailRepository => {
   class LoadAccountByEmailRepositoryStub implements LoadAccountByEmailRepository {
@@ -49,8 +46,7 @@ const makeUpdateAccessTokenRepositoryStub = (): UpdateAccessTokenRepository => {
   class UpdateAccessTokenRepositoryStub implements UpdateAccessTokenRepository {
     async updateAccessToken (id: string, token: string): Promise<void> {
       await new Promise(resolve => {
-        // @ts-expect-error
-        resolve()
+        resolve(null)
       })
     }
   }

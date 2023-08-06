@@ -1,6 +1,8 @@
+import { type Controller } from '@/presentation/protocols/controller'
+import { type Authentication } from '@/domain/usecases/account/authentication'
+import { type Validation } from '@/presentation/protocols/validation'
+import { type HttpRequest, type HttpResponse } from '@/presentation/protocols/http'
 import { badRequest, ok, serverError, unauthorized } from '@/presentation/helpers/http/http-helper'
-import { type Controller, type HttpRequest, type HttpResponse, type Authentication } from './signin-controller-protocols'
-import { type Validation } from '@/presentation/protocols'
 
 export class SignInController implements Controller {
   constructor (private readonly authentication: Authentication, private readonly validation: Validation) {

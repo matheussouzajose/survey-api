@@ -1,12 +1,9 @@
-import {
-  type Controller,
-  type HttpRequest,
-  type HttpResponse
-} from '@/presentation/protocols'
-import { forbidden, ok, serverError } from '@/presentation/helpers/http/http-helper'
+import { type Controller } from '@/presentation/protocols/controller'
 import { type LoadSurveysById } from '@/domain/usecases/survey/load-survey-by-id'
-import { InvalidParamError } from '@/presentation/errors'
 import { type SaveSurveyResult } from '@/domain/usecases/survey-result/save-survey-result'
+import { type HttpRequest, type HttpResponse } from '@/presentation/protocols/http'
+import { forbidden, ok, serverError } from '@/presentation/helpers/http/http-helper'
+import { InvalidParamError } from '@/presentation/errors/invalid-param-error'
 
 export class SaveSurveyResultController implements Controller {
   constructor (

@@ -1,8 +1,9 @@
-import { LogControllerDecorator } from './log-controller-decorator'
-import { type Controller, type HttpRequest, type HttpResponse } from '@/presentation/protocols'
+import { type Controller } from '@/presentation/protocols/controller'
+import { type HttpRequest, type HttpResponse } from '@/presentation/protocols/http'
 import { created, serverError } from '@/presentation/helpers/http/http-helper'
 import { type LogErrorRepository } from '@/data/protocols/db/log/log-error-repository'
 import { type AccountModel } from '@/domain/models/account'
+import { LogControllerDecorator } from '@/main/decorators/log-controller-decorator'
 
 const makeControllerStub = (): Controller => {
   class ControllerStub implements Controller {
@@ -19,8 +20,8 @@ const makeControllerStub = (): Controller => {
 const makeLogErrorRepository = (): LogErrorRepository => {
   class LogErrorRepositoryStub implements LogErrorRepository {
     async logError (stack: string): Promise<void> {
-      return new Promise(resolve => {
-        resolve()
+      await new Promise(resolve => {
+        resolve(null)
       })
     }
   }

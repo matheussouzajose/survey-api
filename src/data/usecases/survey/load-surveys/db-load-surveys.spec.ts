@@ -1,5 +1,6 @@
-import { DbLoadSurveys } from './db-load-surveys'
-import { type SurveyModel, type LoadSurveysRepository } from './db-load-surveys-protocols'
+import { type LoadSurveysRepository } from '@/data/protocols/db/survey/load-surveys-repository'
+import { type SurveyModel } from '@/domain/models/survey'
+import { DbLoadSurveys } from '@/data/usecases/survey/load-surveys/db-load-surveys'
 
 const makeLoadSurveysRepositoryStub = (): LoadSurveysRepository => {
   class LoadSurveysRepositoryStub implements LoadSurveysRepository {

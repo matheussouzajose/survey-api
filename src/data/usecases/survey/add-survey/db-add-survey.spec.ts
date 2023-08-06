@@ -1,6 +1,7 @@
 import { type AddSurveyRepository } from '@/data/protocols/db/survey/add-survey-repository'
-import { DbAddSurvey } from './db-add-survey'
-import { type AddSurveyParams, type SurveyModel } from './db-add-survey-protocols'
+import { type AddSurveyParams } from '@/domain/usecases/survey/add-survey'
+import { type SurveyModel } from '@/domain/models/survey'
+import { DbAddSurvey } from '@/data/usecases/survey/add-survey/db-add-survey'
 import MockDate from 'mockdate'
 
 const makeAddSurveyRepository = (): AddSurveyRepository => {
