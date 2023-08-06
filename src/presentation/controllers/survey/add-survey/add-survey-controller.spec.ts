@@ -1,12 +1,12 @@
 import { type Validation } from '@/presentation/protocols/validation'
 import { type AddSurvey, type AddSurveyParams } from '@/domain/usecases/survey/add-survey'
 import { type HttpRequest } from '@/presentation/protocols/http'
-import { type SurveyModel } from '@/domain/models/survey'
 import { AddSurveyController } from '@/presentation/controllers/survey/add-survey/add-survey-controller'
-import MockDate from 'mockdate'
 import { badRequest, created, serverError } from '@/presentation/helpers/http/http-helper'
 import { ServerError } from '@/presentation/errors/server-error'
 import { throwError } from '@/domain/test/test-helpers'
+import { mockSurveyModel } from '@/domain/test/mock-survey'
+import MockDate from 'mockdate'
 
 const makeValidation = (): Validation => {
   class ValidationStub implements Validation {
@@ -22,7 +22,7 @@ const makeAddSurvey = (): AddSurvey => {
   class AddSurveyStub implements AddSurvey {
     async add (survey: AddSurveyParams): Promise<any> {
       return await new Promise(resolve => {
-        resolve(makeFakeSurveyModel())
+        resolve(mockSurveyModel())
       })
     }
   }
@@ -40,18 +40,6 @@ const makeFakeHttpRequest = (): HttpRequest => {
       }],
       date: new Date()
     }
-  }
-}
-
-const makeFakeSurveyModel = (): SurveyModel => {
-  return {
-    id: 'any_id',
-    question: 'any_question',
-    answers: [{
-      image: 'any_string',
-      answer: 'any_answer'
-    }],
-    date: new Date()
   }
 }
 
@@ -120,6 +108,6 @@ describe('AddSurvey Controller', () => {
   test('Should return 201 if valid data is provided', async () => {
     const { sut } = makeSut()
     const httpResponse = await sut.handle(makeFakeHttpRequest())
-    expect(httpResponse).toEqual(created(makeFakeSurveyModel()))
+    expect(httpResponse).toEqual(created(mockSurveyModel()))
   })
 })

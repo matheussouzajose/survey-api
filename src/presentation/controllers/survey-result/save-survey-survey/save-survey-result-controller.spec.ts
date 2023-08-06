@@ -16,7 +16,7 @@ const makeSaveSurveyResult = (): SaveSurveyResult => {
   class AddSurveyStub implements SaveSurveyResult {
     async save (survey: SaveSurveyResultParams): Promise<SurveyResultModel> {
       return await new Promise(resolve => {
-        resolve(makeSurveyResultModel())
+        resolve(mockSurveyResultModel())
       })
     }
   }
@@ -60,7 +60,7 @@ const makeSurveyModel = (): SurveyModel => {
   }
 }
 
-const makeSurveyResultModel = (): SurveyResultModel => {
+const mockSurveyResultModel = (): SurveyResultModel => {
   return {
     id: 'any_id',
     surveyId: 'any_survey_id',
@@ -159,6 +159,6 @@ describe('SaveSurveyResult Controller', () => {
   test('Should ok on success', async () => {
     const { sut } = makeSut()
     const httpResponse = await sut.handle(makeHttpRequest())
-    expect(httpResponse).toEqual(ok(makeSurveyResultModel()))
+    expect(httpResponse).toEqual(ok(mockSurveyResultModel()))
   })
 })

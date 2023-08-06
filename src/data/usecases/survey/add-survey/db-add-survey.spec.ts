@@ -4,36 +4,15 @@ import { type SurveyModel } from '@/domain/models/survey'
 import { DbAddSurvey } from '@/data/usecases/survey/add-survey/db-add-survey'
 import MockDate from 'mockdate'
 import { throwError } from '@/domain/test/test-helpers'
+import { mockAddSurveyParams, mockSurveyModel } from '@/domain/test/mock-survey'
 
 const makeAddSurveyRepository = (): AddSurveyRepository => {
   class AddAccountRepositoryStub implements AddSurveyRepository {
     async add (survey: AddSurveyParams): Promise<SurveyModel> {
-      return await new Promise(resolve => { resolve(makeFakeSurveyModel()) })
+      return await new Promise(resolve => { resolve(mockSurveyModel()) })
     }
   }
   return new AddAccountRepositoryStub()
-}
-const makeAddSurveyParams = (): AddSurveyParams => {
-  return {
-    question: 'any_question',
-    answers: [{
-      image: 'any_string',
-      answer: 'any_answer'
-    }],
-    date: new Date()
-  }
-}
-
-const makeFakeSurveyModel = (): SurveyModel => {
-  return {
-    id: 'any_id',
-    question: 'any_question',
-    answers: [{
-      image: 'any_string',
-      answer: 'any_answer'
-    }],
-    date: new Date()
-  }
 }
 
 type SutTypes = {
@@ -63,21 +42,21 @@ describe('DbAddSurvey Usecase', () => {
     const { sut, addSurveyRepositoryStub } = makeSut()
 
     const addSpy = jest.spyOn(addSurveyRepositoryStub, 'add')
-    await sut.add(makeAddSurveyParams())
-    expect(addSpy).toHaveBeenCalledWith(makeAddSurveyParams())
+    await sut.add(mockAddSurveyParams())
+    expect(addSpy).toHaveBeenCalledWith(mockAddSurveyParams())
   })
 
   test('Should throw if AddSurveyRepository throws', async () => {
     const { sut, addSurveyRepositoryStub } = makeSut()
 
     jest.spyOn(addSurveyRepositoryStub, 'add').mockImplementationOnce(throwError)
-    const promise = sut.add(makeAddSurveyParams())
+    const promise = sut.add(mockAddSurveyParams())
     await expect(promise).rejects.toThrow()
   })
 
   test('Should return an add-account on success', async () => {
     const { sut } = makeSut()
-    const account = await sut.add(makeAddSurveyParams())
-    expect(account).toEqual(makeFakeSurveyModel())
+    const account = await sut.add(mockAddSurveyParams())
+    expect(account).toEqual(mockSurveyModel())
   })
 })

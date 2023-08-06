@@ -5,32 +5,12 @@ import MockDate from 'mockdate'
 import { noContent, ok, serverError } from '@/presentation/helpers/http/http-helper'
 import { ServerError } from '@/presentation/errors/server-error'
 import { throwError } from '@/domain/test/test-helpers'
-
-const makeFakeSurveys = (): SurveyModel[] => {
-  return [{
-    id: 'any_id',
-    question: 'any_question',
-    answers: [{
-      image: 'any_string',
-      answer: 'any_answer'
-    }],
-    date: new Date()
-  },
-  {
-    id: 'other_id',
-    question: 'other_question',
-    answers: [{
-      image: 'other_string',
-      answer: 'other_answer'
-    }],
-    date: new Date()
-  }]
-}
+import { mockSurveysModel } from '@/domain/test/mock-survey'
 
 const makeLoadSurveysStub = (): LoadSurveys => {
   class LoadSurveysStub implements LoadSurveys {
     async loadAll (): Promise<SurveyModel[]> {
-      return makeFakeSurveys()
+      return mockSurveysModel()
     }
   }
 
@@ -73,7 +53,7 @@ describe('LoadSurveys Controller', () => {
   test('Should return 200 on success', async () => {
     const { sut } = makeSut()
     const surveys = await sut.handle({})
-    expect(surveys).toEqual(ok(makeFakeSurveys()))
+    expect(surveys).toEqual(ok(mockSurveysModel()))
   })
 
   test('Should return 204 if LoadSurveys return empty', async () => {

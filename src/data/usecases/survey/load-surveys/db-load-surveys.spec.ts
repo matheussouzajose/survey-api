@@ -2,38 +2,18 @@ import { type LoadSurveysRepository } from '@/data/protocols/db/survey/load-surv
 import { type SurveyModel } from '@/domain/models/survey'
 import { DbLoadSurveys } from '@/data/usecases/survey/load-surveys/db-load-surveys'
 import { throwError } from '@/domain/test/test-helpers'
+import { mockSurveysModel } from '@/domain/test/mock-survey'
 
 const makeLoadSurveysRepositoryStub = (): LoadSurveysRepository => {
   class LoadSurveysRepositoryStub implements LoadSurveysRepository {
     async loadAll (): Promise<SurveyModel[]> {
       return await new Promise(resolve => {
-        resolve(makeFakeSurveys())
+        resolve(mockSurveysModel())
       })
     }
   }
 
   return new LoadSurveysRepositoryStub()
-}
-
-const makeFakeSurveys = (): SurveyModel[] => {
-  return [{
-    id: 'any_id',
-    question: 'any_question',
-    answers: [{
-      image: 'any_string',
-      answer: 'any_answer'
-    }],
-    date: new Date()
-  },
-  {
-    id: 'other_id',
-    question: 'other_question',
-    answers: [{
-      image: 'other_string',
-      answer: 'other_answer'
-    }],
-    date: new Date()
-  }]
 }
 
 type SutTypes = {
@@ -68,7 +48,7 @@ describe('DbSaveSurveyResult UseCase', () => {
   test('Should return an account on success', async () => {
     const { sut } = makeSut()
     const surveys = await sut.loadAll()
-    expect(surveys).toEqual(makeFakeSurveys())
+    expect(surveys).toEqual(mockSurveysModel())
   })
 
   test('Should throw if LoadSurveysRepository throws', async () => {

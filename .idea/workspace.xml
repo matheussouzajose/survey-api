@@ -7,22 +7,14 @@
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/globalConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/globalConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/account/add-account/db-add-account.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/account/add-account/db-add-account.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/usecases/account/authentication/db-authentication.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/account/authentication/db-authentication.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/usecases/account/load-account-by-email/db-load-account-by-token.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/account/load-account-by-email/db-load-account-by-token.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/usecases/survey-result/save-survey-result/db-save-survey-result.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/survey-result/save-survey-result/db-save-survey-result.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/usecases/survey/add-survey/db-add-survey.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/survey/add-survey/db-add-survey.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/usecases/survey/load-survey-by-id/db-load-survey-by-id.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/survey/load-survey-by-id/db-load-survey-by-id.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/usecases/survey/load-surveys/db-load-surveys.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/survey/load-surveys/db-load-surveys.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/criptography/jwt-adapter/jwt-adapter.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/criptography/jwt-adapter/jwt-adapter.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/decorators/log-controller-decorator.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/decorators/log-controller-decorator.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/account/signin/signin-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/account/signin/signin-controller.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/account/signup/signup-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/account/signup/signup-controller.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey-result/save-survey-survey/save-survey-result-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey-result/save-survey-survey/save-survey-result-controller.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/load-surveys/load-surveys-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/load-surveys/load-surveys-controller.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/middlewares/auth-middleware.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validation/validators/email-validator.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validators/email-validator.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
