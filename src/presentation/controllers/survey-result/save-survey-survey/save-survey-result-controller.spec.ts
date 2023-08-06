@@ -6,13 +6,13 @@ import { SaveSurveyResultController } from './save-survey-result-controller'
 import { type LoadSurveysById } from '@/domain/usecases/survey/load-survey-by-id'
 import { InvalidParamError, ServerError } from '@/presentation/errors'
 import { forbidden, ok, serverError } from '@/presentation/helpers/http/http-helper'
-import { type SaveSurveyResult, type SaveSurveyResultModel } from '@/domain/usecases/survey-result/save-survey-result'
+import { type SaveSurveyResult, type SaveSurveyResultParams } from '@/domain/usecases/survey-result/save-survey-result'
 import { type SurveyResultModel } from '@/domain/models/survey-result'
 import MockDate from 'mockdate'
 
 const makeSaveSurveyResult = (): SaveSurveyResult => {
   class AddSurveyStub implements SaveSurveyResult {
-    async save (survey: SaveSurveyResultModel): Promise<SurveyResultModel> {
+    async save (survey: SaveSurveyResultParams): Promise<SurveyResultModel> {
       return await new Promise(resolve => {
         resolve(makeSurveyResultModel())
       })

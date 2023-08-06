@@ -2,7 +2,7 @@ import {
   type HttpRequest,
   type Validation,
   type AddSurvey,
-  type AddSurveyModel,
+  type AddSurveyParams,
   type SurveyModel
 } from './add-survey-controller-protocols'
 import { AddSurveyController } from './add-survey-controller'
@@ -22,7 +22,7 @@ const makeValidation = (): Validation => {
 
 const makeAddSurvey = (): AddSurvey => {
   class AddSurveyStub implements AddSurvey {
-    async add (survey: AddSurveyModel): Promise<any> {
+    async add (survey: AddSurveyParams): Promise<any> {
       return await new Promise(resolve => {
         resolve(makeFakeSurveyModel())
       })

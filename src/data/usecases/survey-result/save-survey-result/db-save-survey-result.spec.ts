@@ -1,5 +1,5 @@
 import {
-  type SaveSurveyResultModel,
+  type SaveSurveyResultParams,
   type SurveyResultModel,
   type SaveSurveyResultRepository
 } from './db-save-survey-result-protocols'
@@ -8,21 +8,21 @@ import MockDate from 'mockdate'
 
 const makeSaveSurveyResultRepository = (): SaveSurveyResultRepository => {
   class SaveSurveyResultRepositoryStub implements SaveSurveyResultRepository {
-    async save (survey: SaveSurveyResultModel): Promise<SurveyResultModel> {
+    async save (survey: SaveSurveyResultParams): Promise<SurveyResultModel> {
       return makeSurveyResultModel()
     }
   }
   return new SaveSurveyResultRepositoryStub()
 }
 
-const makeSaveSurveyResultModel = (): SaveSurveyResultModel => ({
+const makeSaveSurveyResultParams = (): SaveSurveyResultParams => ({
   surveyId: 'any_survey_id',
   accountId: 'any_account_id',
   answer: 'any_answer',
   date: new Date()
 })
 
-const makeSurveyResultModel = (): SurveyResultModel => Object.assign({}, makeSaveSurveyResultModel(), {
+const makeSurveyResultModel = (): SurveyResultModel => Object.assign({}, makeSaveSurveyResultParams(), {
   id: 'any_id'
 })
 
@@ -53,21 +53,21 @@ describe('DbSaveSurveyResult Usecase', () => {
     const { sut, saveSurveyResultRepositoryStub } = makeSut()
 
     const saveSpy = jest.spyOn(saveSurveyResultRepositoryStub, 'save')
-    await sut.save(makeSaveSurveyResultModel())
-    expect(saveSpy).toHaveBeenCalledWith(makeSaveSurveyResultModel())
+    await sut.save(makeSaveSurveyResultParams())
+    expect(saveSpy).toHaveBeenCalledWith(makeSaveSurveyResultParams())
   })
 
   test('Should throw if SaveSurveyResultRepository throws', async () => {
     const { sut, saveSurveyResultRepositoryStub } = makeSut()
 
     jest.spyOn(saveSurveyResultRepositoryStub, 'save').mockReturnValueOnce(new Promise((resolve, reject) => { reject(new Error()) }))
-    const promise = sut.save(makeSaveSurveyResultModel())
+    const promise = sut.save(makeSaveSurveyResultParams())
     await expect(promise).rejects.toThrow()
   })
 
   test('Should return a survey result on success', async () => {
     const { sut } = makeSut()
-    const surveyResult = await sut.save(makeSaveSurveyResultModel())
+    const surveyResult = await sut.save(makeSaveSurveyResultParams())
     expect(surveyResult).toEqual(makeSurveyResultModel())
   })
 })

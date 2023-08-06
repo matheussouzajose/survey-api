@@ -1,6 +1,6 @@
 import {
   type Authentication,
-  type AuthenticationModel,
+  type AuthenticationParams,
   type HashComparer,
   type Encrypter,
   type UpdateAccessTokenRepository,
@@ -16,7 +16,7 @@ export class DbAuthentication implements Authentication {
   ) {
   }
 
-  async auth (authentication: AuthenticationModel): Promise<string | null> {
+  async auth (authentication: AuthenticationParams): Promise<string | null> {
     const account = await this.loadAccountByEmailRepository.loadByEmail(authentication.email)
     if (!account) {
       return null

@@ -7,7 +7,28 @@
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/globalConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/globalConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/adapters/express-route-adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/adapters/express-route-adapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/account/add-account-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/account/add-account-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/survey-result/save-survey-result-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/survey-result/save-survey-result-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/protocols/db/survey/add-survey-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/protocols/db/survey/add-survey-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/account/add-account/db-add-account.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/account/add-account/db-add-account.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/account/add-account/db-add-account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/account/add-account/db-add-account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/account/authentication/db-authentication.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/account/authentication/db-authentication.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/account/authentication/db-authentication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/account/authentication/db-authentication.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/survey-result/save-survey-result/db-save-survey-result.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/survey-result/save-survey-result/db-save-survey-result.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/survey-result/save-survey-result/db-save-survey-result.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/survey-result/save-survey-result/db-save-survey-result.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/survey/add-survey/db-add-survey.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/survey/add-survey/db-add-survey.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/usecases/survey/add-survey/db-add-survey.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/usecases/survey/add-survey/db-add-survey.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/account/add-account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/account/add-account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/account/authentication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/account/authentication.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/survey-result/save-survey-result.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/survey-result/save-survey-result.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/survey/add-survey.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/usecases/survey/add-survey.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/survey-result/survey-result-mongo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/survey-result/survey-result-mongo-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/survey/survey-mongo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/survey/survey-mongo-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/access/signin/signin-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signin/signin-controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/access/signup/signup-controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey-result/save-survey-survey/save-survey-result-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey-result/save-survey-survey/save-survey-result-controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/survey/add-survey/add-survey-controller.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,22 +53,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/matheus/Courses/surveys/src/main/factories/usecases/survey",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "/home/matheus/.nvm/versions/node/v16.14.2/bin/node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "/home/matheus/Courses/surveys/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/matheus/Courses/surveys/src/main/factories/usecases/survey&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;/home/matheus/.nvm/versions/node/v16.14.2/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/matheus/Courses/surveys/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/factories/usecases/survey" />
@@ -81,6 +102,7 @@
       <workItem from="1690155890404" duration="388000" />
       <workItem from="1690156286297" duration="60945000" />
       <workItem from="1691024863486" duration="27005000" />
+      <workItem from="1691276351219" duration="845000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ensure SignUpController an error if no name is provided">
       <option name="closed" value="true" />
