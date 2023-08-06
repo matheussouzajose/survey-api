@@ -10,6 +10,7 @@ import MockDate from 'mockdate'
 import { forbidden, ok, serverError } from '@/presentation/helpers/http/http-helper'
 import { InvalidParamError } from '@/presentation/errors/invalid-param-error'
 import { ServerError } from '@/presentation/errors/server-error'
+import {throwError} from "@/domain/test/test-helpers";
 
 const makeSaveSurveyResult = (): SaveSurveyResult => {
   class AddSurveyStub implements SaveSurveyResult {
@@ -116,11 +117,7 @@ describe('SaveSurveyResult Controller', () => {
 
   test('Should return 500 if loadSurveyById throws', async () => {
     const { sut, loadSurveyByIdStub } = makeSut()
-    jest.spyOn(loadSurveyByIdStub, 'loadById').mockImplementationOnce(async () => {
-      return await new Promise((resolve, reject) => {
-        reject(new Error())
-      })
-    })
+    jest.spyOn(loadSurveyByIdStub, 'loadById').mockImplementationOnce(throwError)
     const httpResponse = await sut.handle(makeHttpRequest())
     expect(httpResponse).toEqual(serverError(new ServerError()))
   })
@@ -154,11 +151,7 @@ describe('SaveSurveyResult Controller', () => {
 
   test('Should return 500 if SaveSurveyResult throws', async () => {
     const { sut, saveSurveyResultStub } = makeSut()
-    jest.spyOn(saveSurveyResultStub, 'save').mockImplementationOnce(async () => {
-      return await new Promise((resolve, reject) => {
-        reject(new Error())
-      })
-    })
+    jest.spyOn(saveSurveyResultStub, 'save').mockImplementationOnce(throwError)
     const httpResponse = await sut.handle(makeHttpRequest())
     expect(httpResponse).toEqual(serverError(new ServerError()))
   })

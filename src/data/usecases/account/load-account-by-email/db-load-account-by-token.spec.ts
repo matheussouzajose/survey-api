@@ -2,6 +2,8 @@ import { type Decrypter } from '@/data/protocols/criptography/decrypter'
 import { type LoadAccountByTokenRepository } from '@/data/protocols/db/account/load-account-by-token-repository'
 import { type AccountModel } from '@/domain/models/account'
 import { DbLoadAccountByToken } from '@/data/usecases/account/load-account-by-email/db-load-account-by-token'
+import { mockAccountModel } from '@/domain/test/mock-account'
+import {throwError} from "@/domain/test/test-helpers";
 
 const makeDecrypterStub = (): Decrypter => {
   class DecrypterStub implements Decrypter {
@@ -17,20 +19,13 @@ const makeLoadAccountByTokenRepositoryStub = (): LoadAccountByTokenRepository =>
   class LoadAccountByTokenRepositoryStub implements LoadAccountByTokenRepository {
     async loadByToken (email: string): Promise<AccountModel | null> {
       return await new Promise(resolve => {
-        resolve(makeFakeAccount())
+        resolve(mockAccountModel())
       })
     }
   }
 
   return new LoadAccountByTokenRepositoryStub()
 }
-
-const makeFakeAccount = (): AccountModel => ({
-  id: 'valid_id',
-  name: 'valid_name',
-  email: 'valid_email@mail.com',
-  password: 'hashed_password'
-})
 
 type SutTypes = {
   sut: DbLoadAccountByToken
@@ -81,19 +76,19 @@ describe('DbSaveSurveyResult UseCase', () => {
   test('Should return an account on success', async () => {
     const { sut } = makeSut()
     const account = await sut.loadByToken('any_token', 'any_role')
-    expect(account).toEqual(makeFakeAccount())
+    expect(account).toEqual(mockAccountModel())
   })
 
   test('Should throw if Decrypter throws', async () => {
     const { sut, decrypterStub } = makeSut()
-    jest.spyOn(decrypterStub, 'decrypt').mockReturnValueOnce(Promise.reject(new Error()))
+    jest.spyOn(decrypterStub, 'decrypt').mockImplementationOnce(throwError)
     const promise = sut.loadByToken('any_token', 'any_role')
     await expect(promise).rejects.toThrow()
   })
 
   test('Should throw if LoadAccountByTokenRepository throws', async () => {
     const { sut, loadAccountByEmailRepositoryStub } = makeSut()
-    jest.spyOn(loadAccountByEmailRepositoryStub, 'loadByToken').mockReturnValueOnce(Promise.reject(new Error()))
+    jest.spyOn(loadAccountByEmailRepositoryStub, 'loadByToken').mockImplementationOnce(throwError)
     const promise = sut.loadByToken('any_token', 'any_role')
     await expect(promise).rejects.toThrow()
   })

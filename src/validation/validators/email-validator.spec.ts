@@ -1,5 +1,6 @@
 import { EmailValidation } from './email-validation'
 import { type EmailValidator } from '@/validation/protocols/email-validator'
+import {throwError} from "@/domain/test/test-helpers";
 
 const makeEmailValidator = (): EmailValidator => {
   class EmailValidatorStub implements EmailValidator {
@@ -35,9 +36,7 @@ describe('Email Validation', () => {
 
   test('Should return 500 if EmailValidator throws', () => {
     const { sut, emailValidatorStub } = makeSut()
-    jest.spyOn(emailValidatorStub, 'isValid').mockImplementationOnce(() => {
-      throw new Error()
-    })
+    jest.spyOn(emailValidatorStub, 'isValid').mockImplementationOnce(throwError)
     expect(sut.validate).toThrow()
   })
 })

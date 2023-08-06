@@ -8,11 +8,13 @@ import { badRequest, created, forbidden, serverError } from '@/presentation/help
 import { ServerError } from '@/presentation/errors/server-error'
 import { EmailInUseError } from '@/presentation/errors/email-in-use-error'
 import { MissingParamError } from '@/presentation/errors/missing-param-error'
+import { mockAccountModel } from '@/domain/test/mock-account'
+import { throwError } from '@/domain/test/test-helpers'
 
 const makeAddAccount = (): AddAccount => {
   class AddAccountStub implements AddAccount {
     async add (account: AddAccountParams): Promise<AccountModel | null> {
-      return await new Promise(resolve => { resolve(makeFakeAccount()) })
+      return await new Promise(resolve => { resolve(mockAccountModel()) })
     }
   }
 
@@ -39,14 +41,6 @@ const makeAuthentication = (): Authentication => {
   return new AuthenticationStub()
 }
 
-const makeFakeAccount = (): AccountModel => {
-  return {
-    id: 'valid_id',
-    name: 'valid_name',
-    email: 'valid_email@mail.com',
-    password: 'valid_password'
-  }
-}
 const makeFakeRequest = (): HttpRequest => {
   return {
     body: {
@@ -92,11 +86,7 @@ describe('SignUp Controller', () => {
 
   test('Should return 500 if AddAccount throws', async () => {
     const { sut, addAccountStub } = makeSut()
-    jest.spyOn(addAccountStub, 'add').mockImplementationOnce(async () => {
-      return await new Promise((resolve, reject) => {
-        reject(new Error())
-      })
-    })
+    jest.spyOn(addAccountStub, 'add').mockImplementationOnce(throwError)
     const httpResponse = await sut.handle(makeFakeRequest())
     expect(httpResponse).toEqual(serverError(new ServerError()))
   })
@@ -140,9 +130,7 @@ describe('SignUp Controller', () => {
 
   test('Should return 500 if Authentication throws', async () => {
     const { sut, authenticationStub } = makeSut()
-    jest.spyOn(authenticationStub, 'auth').mockReturnValueOnce(new Promise((resolve, reject) => {
-      reject(new Error())
-    }))
+    jest.spyOn(authenticationStub, 'auth').mockImplementationOnce(throwError)
     const httpResponse = await sut.handle(makeFakeRequest())
     expect(httpResponse).toEqual(serverError(new ServerError()))
   })
