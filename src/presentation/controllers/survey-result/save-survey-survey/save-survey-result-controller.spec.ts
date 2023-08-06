@@ -10,7 +10,7 @@ import MockDate from 'mockdate'
 import { forbidden, ok, serverError } from '@/presentation/helpers/http/http-helper'
 import { InvalidParamError } from '@/presentation/errors/invalid-param-error'
 import { ServerError } from '@/presentation/errors/server-error'
-import {throwError} from "@/domain/test/test-helpers";
+import { throwError } from '@/domain/test/test-helpers'
 
 const makeSaveSurveyResult = (): SaveSurveyResult => {
   class AddSurveyStub implements SaveSurveyResult {

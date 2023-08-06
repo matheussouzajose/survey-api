@@ -1,7 +1,7 @@
 import { DbLoadSurveyById } from './db-load-survey-by-id'
 import { type LoadSurveyByIdRepository } from '@/data/protocols/db/survey/load-survey-by-id-repository'
 import { type SurveyModel } from '@/domain/models/survey'
-import {throwError} from "@/domain/test/test-helpers";
+import { throwError } from '@/domain/test/test-helpers'
 
 const makeLoadSurveyByIdRepositoryStub = (): LoadSurveyByIdRepository => {
   class LoadSurveyByIdRepositoryStub implements LoadSurveyByIdRepository {

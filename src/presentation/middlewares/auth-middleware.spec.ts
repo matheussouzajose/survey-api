@@ -5,7 +5,7 @@ import { AuthMiddleware } from '@/presentation/middlewares/auth-middleware'
 import { forbidden, ok, serverError } from '@/presentation/helpers/http/http-helper'
 import { AccessDeniedError } from '@/presentation/errors/access-denied-error'
 import { mockAccountModel } from '@/domain/test/mock-account'
-import {throwError} from "@/domain/test/test-helpers";
+import { throwError } from '@/domain/test/test-helpers'
 
 const makeFakeHttpRequest = (): HttpRequest => {
   return {

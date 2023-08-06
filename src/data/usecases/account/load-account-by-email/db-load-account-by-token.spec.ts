@@ -3,7 +3,7 @@ import { type LoadAccountByTokenRepository } from '@/data/protocols/db/account/l
 import { type AccountModel } from '@/domain/models/account'
 import { DbLoadAccountByToken } from '@/data/usecases/account/load-account-by-email/db-load-account-by-token'
 import { mockAccountModel } from '@/domain/test/mock-account'
-import {throwError} from "@/domain/test/test-helpers";
+import { throwError } from '@/domain/test/test-helpers'
 
 const makeDecrypterStub = (): Decrypter => {
   class DecrypterStub implements Decrypter {

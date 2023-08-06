@@ -4,7 +4,7 @@ import { LoadSurveysController } from '@/presentation/controllers/survey/load-su
 import MockDate from 'mockdate'
 import { noContent, ok, serverError } from '@/presentation/helpers/http/http-helper'
 import { ServerError } from '@/presentation/errors/server-error'
-import {throwError} from "@/domain/test/test-helpers";
+import { throwError } from '@/domain/test/test-helpers'
 
 const makeFakeSurveys = (): SurveyModel[] => {
   return [{

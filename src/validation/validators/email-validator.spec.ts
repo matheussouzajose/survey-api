@@ -1,6 +1,6 @@
 import { EmailValidation } from './email-validation'
 import { type EmailValidator } from '@/validation/protocols/email-validator'
-import {throwError} from "@/domain/test/test-helpers";
+import { throwError } from '@/domain/test/test-helpers'
 
 const makeEmailValidator = (): EmailValidator => {
   class EmailValidatorStub implements EmailValidator {
