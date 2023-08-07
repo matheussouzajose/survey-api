@@ -1,4 +1,4 @@
-import { type SaveSurveyResultParams } from '@/domain/usecases/survey-result/save-survey-result'
+import { type SaveSurveyResult, type SaveSurveyResultParams } from '@/domain/usecases/survey-result/save-survey-result'
 import { type SurveyResultModel } from '@/domain/models/survey-result'
 
 export const mockSaveSurveyResultParams = (): SaveSurveyResultParams => ({
@@ -11,3 +11,15 @@ export const mockSaveSurveyResultParams = (): SaveSurveyResultParams => ({
 export const mockSurveyResultModel = (): SurveyResultModel => Object.assign({}, mockSaveSurveyResultParams(), {
   id: 'any_id'
 })
+
+export const mockSaveSurveyResult = (): SaveSurveyResult => {
+  class AddSurveyStub implements SaveSurveyResult {
+    async save (survey: SaveSurveyResultParams): Promise<SurveyResultModel> {
+      return await new Promise(resolve => {
+        resolve(mockSurveyResultModel())
+      })
+    }
+  }
+
+  return new AddSurveyStub()
+}

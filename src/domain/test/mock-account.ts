@@ -1,5 +1,5 @@
 import { type AccountModel } from '@/domain/models/account'
-import { type AddAccountParams } from '@/domain/usecases/account/add-account'
+import { type AddAccount, type AddAccountParams } from '@/domain/usecases/account/add-account'
 import { type LoadAccountByToken } from '@/domain/usecases/account/load-account-by-token'
 
 export const mockAccountModel = (): AccountModel => ({
@@ -23,4 +23,14 @@ export const mockLoadAccountByToken = (): LoadAccountByToken => {
   }
 
   return new LoadAccountByTokenStub()
+}
+
+export const mockAddAccount = (): AddAccount => {
+  class AddAccountStub implements AddAccount {
+    async add (account: AddAccountParams): Promise<AccountModel | null> {
+      return await new Promise(resolve => { resolve(mockAccountModel()) })
+    }
+  }
+
+  return new AddAccountStub()
 }
