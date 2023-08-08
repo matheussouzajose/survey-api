@@ -1,7 +1,9 @@
 import { type SurveyModel } from '@/domain/models/survey'
 
-export type AddSurveyParams = Omit<SurveyModel, 'id'>
-
 export interface AddSurvey {
-  add: (survey: AddSurveyParams) => Promise<SurveyModel>
+  add: (data: AddSurvey.Params) => Promise<void>
+}
+
+export namespace AddSurvey {
+  export type Params = Omit<SurveyModel, 'id'>
 }

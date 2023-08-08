@@ -1,27 +1,20 @@
 import { type Middleware } from '@/presentation/protocols/middleware'
-import { type HttpRequest } from '@/presentation/protocols/http'
 import { type Request, type Response, type NextFunction } from 'express'
 
 export const adaptMiddleware = (middleware: Middleware) => {
   return async (req: Request, res: Response, next: NextFunction) => {
-    const httpRequest: HttpRequest = {
-      headers: req.headers
+    const request = {
+      accessToken: req.headers?.['x-access-token'],
+      ...(req.headers || {})
     }
-
-    const httpResponse = await middleware.handle(httpRequest)
-    if ([200].includes(httpResponse.statusCode)) {
+    const httpResponse = await middleware.handle(request)
+    if (httpResponse.statusCode === 200) {
       Object.assign(req, httpResponse.body)
       next()
-      return
+    } else {
+      res.status(httpResponse.statusCode).json({
+        error: httpResponse.body.message
+      })
     }
-
-    let message = httpResponse.body.message
-    if (httpResponse.body.stack.includes('JsonWebTokenError')) {
-      message = 'invalid format token'
-    }
-
-    return res.status(httpResponse.statusCode).json({
-      message
-    })
   }
 }
