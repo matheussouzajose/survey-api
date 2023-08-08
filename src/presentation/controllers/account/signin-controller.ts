@@ -10,7 +10,7 @@ export class SignInController implements Controller {
     private readonly validation: Validation
   ) {}
 
-  async handle (request: LoginController.Request): Promise<HttpResponse> {
+  async handle (request: SignInController.Request): Promise<HttpResponse> {
     try {
       const error = this.validation.validate(request)
       if (error) {
@@ -27,7 +27,7 @@ export class SignInController implements Controller {
   }
 }
 
-export namespace LoginController {
+export namespace SignInController {
   export type Request = {
     email: string
     password: string

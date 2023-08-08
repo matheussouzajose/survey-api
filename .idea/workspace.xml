@@ -5,8 +5,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f71bf1-c141-4fe1-ab2c-b54b45fa3487" name="Changes" comment="&quot;test: ensure SignUpController an error if no name is provided&quot;">
+      <change afterPath="$PROJECT_DIR$/tests/data/mocks/mock-db-log.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/mocks/mock-db-survey-result.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/mocks/mock-db-survey.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/usecases/account/db-authentication.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/usecases/account/db-load-account-by-token.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/usecases/survey-result/db-load-survey-result.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/usecases/survey-result/db-save-survey-result.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/usecases/survey/db-add-survey.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/usecases/survey/db-check-survey-by-id.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/usecases/survey/db-load-answers-by-survey.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data/usecases/survey/db-load-surveys.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/domain/mocks/mock-survey-result.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/domain/mocks/mock-survey.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/infra/db/mongodb/log/log-mongo-repository.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/infra/db/mongodb/survey-result/survey-result-mongo-repository.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/infra/db/mongodb/survey/survey-mongo-repository.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/infra/validators/email-validator-adapter.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/decorators/log-controller-decorator.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/factories/add-survey-validation-factory.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/factories/login-validation-factory.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/factories/signup-validation-factory.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/graphql/login.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/graphql/survey-result.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/graphql/survey.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/middlewares/body-parser.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/middlewares/content-type.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/middlewares/cors.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/middlewares/no-cache.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/routes/login-routes.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/routes/survey-result-routes.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/main/routes/survey-routes.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/presentation/controllers/add-survey-controller.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/presentation/controllers/load-survey-result-controller.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/presentation/controllers/load-surveys-controller.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/presentation/controllers/login-controller.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/presentation/controllers/save-survey-result-controller.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/presentation/controllers/signup-controller.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/presentation/middlewares/auth-middleware.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/presentation/mocks/mock-account.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/presentation/mocks/mock-survey-result.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/presentation/mocks/mock-survey.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/presentation/mocks/mock-validation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/validation/mocks/mock-email-validator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/validation/validators/compare-fields-validation.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/validation/validators/email-validation.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/validation/validators/required-field-validation.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/validation/validators/validation-composite.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/globalConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/globalConfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/db/mongodb/account/account-mongo-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/config/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/factories/controllers/survey/add-survey-validation-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/factories/controllers/survey/add-survey-validation-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/account/signin-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/account/signin-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/mocks/mock-db-account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/mocks/mock-db-account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/usecases/account/db-add-account.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/usecases/account/db-add-account.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/domain/mocks/mock-account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/domain/mocks/mock-account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/infra/criptography/bcrypt-adapter/bcrypt-adapter.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/infra/cryptography/bcrypt-adapter/bcrypt-adapter.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/infra/criptography/jwt-adapter/jwt-adapter.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/infra/cryptography/jwt-adapter/jwt-adapter.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/infra/mongodb/account/account-mongo-repository.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/infra/db/mongodb/account/account-mongo-repository.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +92,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/matheus/Courses/surveys/src/main/adapters",
+    "last_opened_file_path": "/home/matheus/Courses/surveys/tests/infra/db/mongodb",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,18 +106,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/infra/db/mongodb" />
+      <recent name="$PROJECT_DIR$/tests/infra/cryptography" />
+      <recent name="$PROJECT_DIR$/tests/data/usecases" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/adapters" />
-      <recent name="$PROJECT_DIR$/src/main" />
-      <recent name="$PROJECT_DIR$/src/main/middlewares" />
-      <recent name="$PROJECT_DIR$/src/main/factories/usecases/survey-result" />
-      <recent name="$PROJECT_DIR$/src/main/factories/usecases/survey" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/factories/usecases/survey-result" />
-      <recent name="$PROJECT_DIR$/src/main/factories/usecases/survey" />
-      <recent name="$PROJECT_DIR$/src/main/factories/usecases/account" />
-      <recent name="$PROJECT_DIR$/src/main/factories/controllers/survey-result" />
-      <recent name="$PROJECT_DIR$/src/main/factories/controllers/survey" />
+      <recent name="$PROJECT_DIR$/tests/infra/db/mongodb/survey-result" />
+      <recent name="$PROJECT_DIR$/tests/infra/db/mongodb/survey" />
+      <recent name="$PROJECT_DIR$/tests/infra/db/mongodb/log" />
+      <recent name="$PROJECT_DIR$/tests/infra/db/mongodb/account" />
+      <recent name="$PROJECT_DIR$/tests/infra/cryptography/bcrypt-adapter" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -81,7 +138,7 @@
       <workItem from="1690156286297" duration="60945000" />
       <workItem from="1691024863486" duration="27005000" />
       <workItem from="1691276351219" duration="845000" />
-      <workItem from="1691458059407" duration="6516000" />
+      <workItem from="1691458059407" duration="10369000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ensure SignUpController an error if no name is provided">
       <option name="closed" value="true" />
