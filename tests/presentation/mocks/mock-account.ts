@@ -1,7 +1,7 @@
-import faker from 'faker'
 import { type AddAccount } from '@/domain/usecases/account/add-account'
 import { type Authentication } from '@/domain/usecases/account/authentication'
 import { type LoadAccountByToken } from '@/domain/usecases/account/load-account-by-token'
+import faker from 'faker'
 
 export class AddAccountSpy implements AddAccount {
   params: AddAccount.Params

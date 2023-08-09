@@ -4,9 +4,9 @@ import { badRequest, forbidden, ok, serverError } from '@/presentation/helpers/h
 import { ServerError } from '@/presentation/errors/server-error'
 import { EmailInUseError } from '@/presentation/errors/email-in-use-error'
 import { MissingParamError } from '@/presentation/errors/missing-param-error'
+import { AddAccountSpy, AuthenticationSpy } from '@/tests/presentation/mocks/mock-account'
+import { ValidationSpy } from '@/tests/presentation/mocks/mock-validation'
 import faker from 'faker'
-import {AddAccountSpy, AuthenticationSpy} from "@/tests/presentation/mocks/mock-account";
-import {ValidationSpy} from "@/tests/presentation/mocks/mock-validation";
 
 const mockRequest = (): SignUpController.Request => {
   const password = faker.internet.password()

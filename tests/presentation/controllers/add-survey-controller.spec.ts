@@ -1,10 +1,10 @@
 import { AddSurveyController } from '@/presentation/controllers/survey/add-survey-controller'
 import faker from 'faker'
-import MockDate from 'mockdate'
 import { badRequest, noContent, serverError } from '@/presentation/helpers/http/http-helper'
 import { throwError } from '@/tests/domain/mocks/test-helpers'
 import { ValidationSpy } from '@/tests/presentation/mocks/mock-validation'
 import { AddSurveySpy } from '@/tests/presentation/mocks/mock-survey'
+import MockDate from 'mockdate'
 
 const mockRequest = (): AddSurveyController.Request => ({
   question: faker.random.words(),

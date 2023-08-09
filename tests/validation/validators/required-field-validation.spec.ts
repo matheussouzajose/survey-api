@@ -1,6 +1,6 @@
 import { RequiredFieldValidation } from '@/validation/validators/required-field-validation'
-import faker from 'faker'
 import { MissingParamError } from '@/presentation/errors/missing-param-error'
+import faker from 'faker'
 
 const field = faker.random.word()
 

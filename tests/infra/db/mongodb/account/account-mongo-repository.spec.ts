@@ -1,8 +1,8 @@
 import { AccountMongoRepository } from '@/infra/db/mongodb/account/account-mongo-repository'
 import { MongoHelper } from '@/infra/db/mongodb/helpers/mongo-helper'
 import { mockAddAccountParams } from '@/tests/domain/mocks/mock-account'
-import faker from 'faker'
 import { type Collection } from 'mongodb'
+import faker from 'faker'
 
 const makeSut = (): AccountMongoRepository => {
   return new AccountMongoRepository()
@@ -75,8 +75,8 @@ describe('AccountMongoRepository', () => {
       const fakeAccount = await accountCollection.findOne({ _id: res.insertedId })
       expect(fakeAccount.accessToken).toBeFalsy()
       const accessToken = faker.datatype.uuid()
-      await sut.updateAccessToken(fakeAccount._id.toHexString(), accessToken)
-      const account = await accountCollection.findOne({ _id: fakeAccount._id.toHexString() })
+      await sut.updateAccessToken(fakeAccount._id.toString(), accessToken)
+      const account = await accountCollection.findOne({ _id: fakeAccount._id })
       expect(account).toBeTruthy()
       expect(account.accessToken).toBe(accessToken)
     })
