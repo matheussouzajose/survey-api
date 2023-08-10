@@ -9,9 +9,9 @@ export default {
     description: 'Essa é a documentação da API feita pelo instrutor Rodrigo Manguinho no curso da Udemy de NodeJs usando Typescript, TDD, Clean Architecture e seguindo os princípios do SOLID e Design Patterns.',
     version: '1.0.0',
     contact: {
-      name: 'Rodrigo Manguinho',
-      email: 'rodrigo.manguinho@gmail.com',
-      url: 'https://www.linkedin.com/in/rmanguinho'
+      name: 'Matheus Souza',
+      email: 'matheus.jose@gmail.com',
+      url: 'https://www.linkedin.com/in/mjosedev'
     },
     license: {
       name: 'GPL-3.0-or-later',

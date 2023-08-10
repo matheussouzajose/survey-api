@@ -12,8 +12,8 @@ let app: Express
 
 const mockAccessToken = async (): Promise<string> => {
   const res = await userCollection.insertOne({
-    name: 'Rodrigo',
-    email: 'rodrigo.manguinho@gmail.com',
+    name: 'Matheus',
+    email: 'matheus.jose@gmail.com',
     password: '123',
     role: 'admin'
   })

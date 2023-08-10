@@ -25,7 +25,7 @@ describe.skip('Login GraphQL', () => {
 
   describe('Login Query', () => {
     const query = `query {
-      login (email: "rodrigo.manguinho@gmail.com", password: "123") {
+      login (email: "matheus.jose@gmail.com", password: "123") {
         accessToken
         name
       }
@@ -34,8 +34,8 @@ describe.skip('Login GraphQL', () => {
     test('Should return an Account on valid credentials', async () => {
       const password = await hash('123', 12)
       await userCollection.insertOne({
-        name: 'Rodrigo',
-        email: 'rodrigo.manguinho@gmail.com',
+        name: 'Matheus',
+        email: 'matheus.jose@gmail.com',
         password
       })
       const res = await request(app)
@@ -43,7 +43,7 @@ describe.skip('Login GraphQL', () => {
         .send({ query })
       expect(res.status).toBe(200)
       expect(res.body.data.login.accessToken).toBeTruthy()
-      expect(res.body.data.login.name).toBe('Rodrigo')
+      expect(res.body.data.login.name).toBe('Matheus')
     })
 
     test('Should return UnauthorizedError on invalid credentials', async () => {
@@ -58,7 +58,7 @@ describe.skip('Login GraphQL', () => {
 
   describe('SignUp Mutation', () => {
     const query = `mutation {
-      signUp (name: "Rodrigo", email: "rodrigo.manguinho@gmail.com", password: "123", passwordConfirmation: "123") {
+      signUp (name: "Matheus", email: "matheus.jose@gmail.com", password: "123", passwordConfirmation: "123") {
         accessToken
         name
       }
@@ -70,14 +70,14 @@ describe.skip('Login GraphQL', () => {
         .send({ query })
       expect(res.status).toBe(200)
       expect(res.body.data.signUp.accessToken).toBeTruthy()
-      expect(res.body.data.signUp.name).toBe('Rodrigo')
+      expect(res.body.data.signUp.name).toBe('Matheus')
     })
 
     test('Should return EmailInUseError on invalid data', async () => {
       const password = await hash('123', 12)
       await userCollection.insertOne({
-        name: 'Rodrigo',
-        email: 'rodrigo.manguinho@gmail.com',
+        name: 'Matheus',
+        email: 'matheus.jose@gmail.com',
         password
       })
       const res = await request(app)
