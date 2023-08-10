@@ -29,9 +29,9 @@ describe('LoadSurveys UseCase', () => {
 
   test('Should call LoadSurveysRepository', async () => {
     const { sut, loadSurveysRepositorySpy } = makeSut()
-    const accountId = faker.datatype.uuid()
-    await sut.load(accountId)
-    expect(loadSurveysRepositorySpy.userId).toBe(accountId)
+    const userId = faker.datatype.uuid()
+    await sut.load(userId)
+    expect(loadSurveysRepositorySpy.userId).toBe(userId)
   })
 
   test('Should return a list of Surveys on success', async () => {

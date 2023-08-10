@@ -45,7 +45,7 @@ describe('Auth Middleware', () => {
     expect(httpResponse).toEqual(forbidden(new AccessDeniedError()))
   })
 
-  test('Should return 200 if LoadAccountByToken returns an account', async () => {
+  test('Should return 200 if LoadAccountByToken returns an user', async () => {
     const { sut, loadUserByTokenSpy } = makeSut()
     const httpResponse = await sut.handle(mockRequest())
     expect(httpResponse).toEqual(ok({

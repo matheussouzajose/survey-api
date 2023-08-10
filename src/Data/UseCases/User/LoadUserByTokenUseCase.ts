@@ -21,10 +21,10 @@ export class LoadUserByTokenUseCase implements LoadUserByTokenProtocol {
       return null
     }
 
-    const account = await this.loaduserByTokenRepository.loadByToken(accessToken, role)
-    if (!account) {
+    const user = await this.loaduserByTokenRepository.loadByToken(accessToken, role)
+    if (!user) {
       return null
     }
-    return account
+    return user
   }
 }

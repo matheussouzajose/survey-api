@@ -5,7 +5,7 @@ import request from 'supertest'
 import { setupApp } from '@/Main/Config/App'
 import { MongoHelper } from '@/Infra/Db/MongoDb/Helpers/MongoHelper'
 
-let accountCollection: Collection
+let userCollection: Collection
 let app: Express
 
 describe.skip('Login GraphQL', () => {
@@ -19,8 +19,8 @@ describe.skip('Login GraphQL', () => {
   })
 
   beforeEach(async () => {
-    accountCollection = await MongoHelper.getCollection('accounts')
-    await accountCollection.deleteMany({})
+    userCollection = await MongoHelper.getCollection('users')
+    await userCollection.deleteMany({})
   })
 
   describe('Login Query', () => {
@@ -33,7 +33,7 @@ describe.skip('Login GraphQL', () => {
 
     test('Should return an Account on valid credentials', async () => {
       const password = await hash('123', 12)
-      await accountCollection.insertOne({
+      await userCollection.insertOne({
         name: 'Rodrigo',
         email: 'rodrigo.manguinho@gmail.com',
         password
@@ -75,7 +75,7 @@ describe.skip('Login GraphQL', () => {
 
     test('Should return EmailInUseError on invalid data', async () => {
       const password = await hash('123', 12)
-      await accountCollection.insertOne({
+      await userCollection.insertOne({
         name: 'Rodrigo',
         email: 'rodrigo.manguinho@gmail.com',
         password
